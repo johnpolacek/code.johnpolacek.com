@@ -1,28 +1,694 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>VideoStreamPlayer</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" type="text/css" href="../css/VisDoc.css" /><script src="../js/jquery.js" type="text/javascript">//</script><script src="../js/common.js" type="text/javascript">//</script><script src="../js/doc.js" type="text/javascript">//</script></head><body id="page_com_johnpolacek_media_VideoStreamPlayer"><script type="text/javascript">VisDoc.initBody();</script><div id="PageTop"><!----></div><div class="VisDoc"><div class="content"><div class="docNav"><ul><li><div id="twistyTOC_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited activeWhenNotFramed"><a href="#"><span class="icon">+</span>Show TOC</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("twistyTOC_show");</script><div id="twistyTOC_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited activeWhenFramed"><a href="#"><span class="icon">&times;</span>Hide TOC</a></div><span id="twistyTOC_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("twistyTOC_hide");</script></li></ul><ul class="accessKeyLinks"><li><a href="#PageTop" accesskey="t"><span class="accessKey">T</span>op</a></li><li><a href="#Summary" accesskey="s"><span class="accessKey">S</span>ummary</a></li><li><a href="#Instanceproperties" accesskey="l">Instance <span class="accessKey">p</span>roperties</a></li><li><a href="#Instancemethods" accesskey="m">Instance <span class="accessKey">m</span>ethods</a></li><li><a href="#Eventhandlers" accesskey="e"><span class="accessKey">E</span>vent handlers</a></li></ul><br class="clear" /></div><h1>VideoStreamPlayer</h1><div class="classProperties"><table cellspacing="0"><tr><th align="left">Kind of class:</th><td>public class</td></tr><tr><th align="left">Package:</th><td><a class="className" href="package-com_johnpolacek_media.html">com.johnpolacek.media</a></td></tr><tr><th align="left">Inherits from:</th><td>Sprite</td></tr><tr><th class="classDetails" align="left">Version:</th><td class="classDetails"><b>20 Mar 2010</b> Now dispatches UIEvent.PLAYBACK_START<br><b>19 Mar 2010</b> Switched poster and controls objects to public vars. Enlarged controls.<br><b>7 Mar 2010</b></td></tr><tr><th class="classDetails" align="left">Author:</th><td class="classDetails">John Polacek, john@johnpolacek.com</td></tr><tr><th class="classDetails" align="left">Classpath:</th><td class="classDetails">com.johnpolacek.media.VideoStreamPlayer</td></tr><tr><th class="classDetails" align="left">File last modified:</th><td class="classDetails">Friday, 12 November 2010, 08:15:15</td></tr></table></div><div class="classDescription"><span class="descriptionSummary">NetStream Video Player</span><div class="classFields"><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Example:</span><div class="item"><ul><li> <pre><span class="codeKeyword">import</span> com.johnpolacek.media.VideoStreamPlayer;
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" encoding="utf-8">
+	<head>
+		<title>VideoStreamPlayer | code.johnpolacek.com | docs</title>
+		<link rel="stylesheet" type="text/css" href="../css/shCoreDefault.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/VisDoc.min.css" />
+		<script type="text/javascript" src="../js/1_jquery.min.js"></script>
+		<script type="text/javascript" src="../js/2_jquery.cookie.min.js"></script>
+		<script type="text/javascript" src="../js/3_jquery.simpletreeview.min.js"></script>
+		<script type="text/javascript" src="../js/4_shCore.min.js"></script>
+		<script type="text/javascript" src="../js/5_shBrushAS3.min.js"></script>
+		<script type="text/javascript" src="../js/6_shBrushJava.min.js"></script>
+		<script type="text/javascript" src="../js/7_VisDoc.min.js"></script>
+	</head>
+	<body class='isShowingNavigation' id='page_com_johnpolacek_media_VideoStreamPlayer'>
+	    <div id='page'> 
+			<div id='wrapper'>
+				<div id='outer'> 
+					<div id='floatWrap'> 
+						<div id='main'>
+							<div id='clearHeaderCenter'></div> 
+							<div id='mainContent'>
+																<h1>VideoStreamPlayer</h1>									<div class='classProperties'>
+		<table cellspacing='0'>
+				<tr>
+		<th>Kind of class:</th>
+		<td>public class</td>
+	</tr>
+							<tr>
+		<th>Package:</th>
+		<td>
+			<ul>
+								<li>			<a href="package_com_johnpolacek_media.html">com.johnpolacek.media</a>
+</li>
+							</ul>
+		</td>
+	</tr>
+							<tr>
+		<th>Inherits from:</th>
+		<td>
+			<ul>
+								<li>			Sprite</li>
+							</ul>
+		</td>
+	</tr>
+																<tr>
+		<th class='classDetails'>Version:</th>
+		<td class='classDetails'><b>20 Mar 2010</b> Now dispatches UIEvent.PLAYBACK_START <br>
+<b>19 Mar 2010</b> Switched poster and controls objects to public vars. Enlarged controls. <br>
+<b>7 Mar 2010</b></td>
+	</tr>
+	<tr>
+		<th class='classDetails'>Author:</th>
+		<td class='classDetails'>John Polacek, john@johnpolacek.com</td>
+	</tr>
+	<tr>
+		<th class='classDetails'>Classpath:</th>
+		<td class='classDetails'>com.johnpolacek.media.VideoStreamPlayer</td>
+	</tr>
+	<tr>
+		<th class='classDetails'>File last modified:</th>
+		<td class='classDetails'>Thursday, 24 February 2011, 22:09:57</td>
+	</tr>
+		</table>
+	</div>
+		<div class='classDescription'>
+	<span class='descriptionSummary'>NetStream Video Player</span>	<div class='classFields'>
+		<div class='boxWithBorder'>
+								<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Example</span>
+				<div class='item'>
+					<ul>
+								<li>
+					<pre>
+import com.johnpolacek.media.VideoStreamPlayer;
 <span class="codeKeyword">var</span> player:AudioPlayer <span class="codeKeyword">new</span> VideoStreamPlayer();
-player.playVideo(<span class="codeString">"example.flv"</span>);
-player.addController();   <span class="codeComment">// adds default controls to player	</span>
-player.addPoster(<span class="codeString">"poster.jpg"</span>);
+player.playVideo(<span class="codeString">&quot;example.flv&quot;</span>);
+player.addController();   <span class="codeComment">// adds default controls to player    </span>
+player.addPoster(<span class="codeString">&quot;poster.jpg&quot;</span>);
 player.autoRewind = <span class="codeIdentifier">true</span>;
 player.autoPlay = <span class="codeIdentifier">false</span>;
-addChild(player);</pre> </li></ul></div></div></div><div class="boxedElem"><div class="contentHolder"><span class="title">See also:</span><div class="item"><ul><li> <span class="doesNotExist"> com.johnpolacek.ui.ProgressBar</span> </li><li> <span class="doesNotExist"> com.johnpolacek.ui.PlayPauseButton</span> </li><li> <span class="doesNotExist"> com.johnpolacek.ui.VolumeControl</span> </li></ul></div></div></div><div class="boxedElem"><div class="contentHolder"><span class="title">Events broadcasted to listeners:</span><div class="item"><ul><li><code>Event.COMPLETE</code>  When load is complete.</li><li><code>UIEvent.PLAYBACK_START</code>  When playback starts.</li><li><code>UIEvent.PLAYBACK_FINISH</code>  When playback finishes.</li></ul></div></div></div></div></div></div><div class="summary"><h2 id="Summary">Summary</h2><div class="docNav"><ul><li><div id="twistyTypeInfo_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">&times;</span>Hide type info</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleTypeInfo_on");</script><div id="twistyTypeInfo_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">+</span>Show type info</a></div><span id="twistyTypeInfo_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleTypeInfo_off");</script></li><li><div id="twistySummaries_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">&times;</span>Hide summaries</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSummaries_on");</script><div id="twistySummaries_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">+</span>Show summaries</a></div><span id="twistySummaries_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSummaries_off");</script></li><li><div id="twistySort_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">&times;</span>Sort by source order</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSort_on");</script><div id="twistySort_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">+</span>Sort alphabetically</a></div><span id="twistySort_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSort_off");</script></li></ul><br class="clear" /></div><div class="memberList"><div class="memberSummaryPart"><span class="title">Instance properties</span><ul class="sortable" id="sortul1"><li class="sortli listnum1"><a href="#buttonColor">buttonColor</a><span class="typeInfo">  : uint</span><ul class="summary"><li>        Color of player buttons.</li></ul></li><li class="sortli listnum2"><a href="#backgroundColor">backgroundColor</a><span class="typeInfo">  : uint</span><ul class="summary"><li>Color of player background.</li></ul></li><li class="sortli listnum3"><a href="#autoPlay">autoPlay</a><span class="typeInfo">  : Boolean</span><ul class="summary"><li>Default is false.</li></ul></li><li class="sortli listnum4"><a href="#autoRewind">autoRewind</a><span class="typeInfo">  : Boolean</span><ul class="summary"><li>Default is true.</li></ul></li><li class="sortli listnum5"><a href="#poster">poster</a><span class="typeInfo">  : Sprite</span><ul class="summary"><li>Optional poster image that displays before video is played.</li></ul></li><li class="sortli listnum6"><a href="#controls">controls</a><span class="typeInfo">  : Sprite</span><ul class="summary"><li>Video controls sprite.</li></ul></li><li class="sortli listnum7"><a href="#controlsOutside">controlsOutside</a><span class="typeInfo">  : Boolean</span><ul class="summary"><li>Boolean determines if controller is inside or outside the video.</li></ul></li></ul></div><div class="memberSummaryPart"><span class="title">Instance methods</span><ul class="sortable" id="sortul2"><li class="sortli listnum1"><a href="#loadVideo">loadVideo</a><span class="typeInfo"> (url:String, videoAutoPlay:Boolean = false) : void</span><ul class="summary"><li>Buffer time for the video in seconds.</li></ul></li><li class="sortli listnum2"><a href="#playVideo">playVideo</a><span class="typeInfo"> (url:String = null) : void</span><ul class="summary"><li>        Starts playback.</li></ul></li><li class="sortli listnum3"><a href="#pauseVideo">pauseVideo</a><span class="typeInfo">  : void</span><ul class="summary"><li>        Pauses playback.</li></ul></li><li class="sortli listnum4"><a href="#resumeVideo">resumeVideo</a><span class="typeInfo">  : void</span><ul class="summary"><li>        Resumes playback.</li></ul></li><li class="sortli listnum5"><a href="#rewindVideo">rewindVideo</a><span class="typeInfo">  : void</span><ul class="summary"><li>        Returns and pauses playback to start of video.</li></ul></li><li class="sortli listnum6"><a href="#seekVideo">seekVideo</a><span class="typeInfo"> (p:Number) : void</span><ul class="summary"><li>        Sets playhead to a percentage of the video's duration.</li></ul></li><li class="sortli listnum7"><a href="#addPoster">addPoster</a><span class="typeInfo"> (filepath:String) : void</span></li><li class="sortli listnum8"><a href="#addController">addController</a><span class="typeInfo">  : void</span></li><li class="sortli listnum9"><a href="#autoHideController">autoHideController</a><span class="typeInfo">  : void</span><ul class="summary"><li>        Moves controller inside the video player and hides on MOUSE_OUT</li></ul></li></ul></div></div></div><div class="memberSection"><h2 id="Instanceproperties">Instance properties</h2><div class="member" id="autoPlay"><h3>autoPlay</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>autoPlay</b>:Boolean = <span class="codeIdentifier">false</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Default is false. </div></div><div class="member" id="autoRewind"><h3>autoRewind</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>autoRewind</b>:Boolean = <span class="codeIdentifier">true</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Default is true. </div></div><div class="member" id="backgroundColor"><h3>backgroundColor</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>backgroundColor</b>:uint = 0x000000
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Color of player background. Default is 0x000000 </div></div><div class="member" id="buttonColor"><h3>buttonColor</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>buttonColor</b>:uint = 0xFFFFFF
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description">         Color of player buttons. Default is 0xFFFFFF </div></div><div class="member" id="controls"><h3>controls</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>controls</b>:Sprite = <span class="codeKeyword">new</span> Sprite()
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Video controls sprite. </div></div><div class="member" id="controlsOutside"><h3>controlsOutside</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>controlsOutside</b>:Boolean = <span class="codeIdentifier">false</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Boolean determines if controller is inside or outside the video. Default is true. </div></div><div class="member" id="poster"><h3>poster</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>poster</b>:Sprite = <span class="codeKeyword">new</span> Sprite()
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Optional poster image that displays before video is played. </div></div></div><div class="memberSection"><h2 id="Instancemethods">Instance methods</h2><div class="member" id="addController"><h3>addController</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>addController</b> (
-</div><div class="code">) : void</div><br class="clear" /></div></div></div><div class="member" id="addPoster"><h3>addPoster</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>addPoster</b> (
-</div><div class="code">filepath:String) : void</div><br class="clear" /></div></div></div><div class="member" id="autoHideController"><h3>autoHideController</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>autoHideController</b> (
-</div><div class="code">) : void</div><br class="clear" /></div></div><div class="description">         Moves controller inside the video player and hides on MOUSE_OUT </div></div><div class="member" id="loadVideo"><h3>loadVideo</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>loadVideo</b> (
+addChild(player);
+</pre>									</li>
+							</ul>			</div>
+					</div>
+	</div>
 
-</div><div class="code">url:String,
-videoAutoPlay:Boolean = false) : void</div><br class="clear" /></div></div><div class="description"> Buffer time for the video in seconds. *<br />        const BUFFER_TIME:Number = 8;<br />        Default volume for player. *<br />        const DEFAULT_VOLUME:Number	= 0.6;<br />        Progress update delay in milliseconds. *<br />        const PROGRESS_TIMER_DELAY:int = 50;<br /><br /><br />        public function VideoStreamPlayer()<br />        {<br />            connection = new NetConnection();<br />            connection.connect(null);<br />            stream = new NetStream(connection);<br />            stream.addEventListener(AsyncErrorEvent.ASYNC_ERROR, aSyncErrorHandler);<br /><br />            var customClient:Object = new Object();<br />            customClient.onMetaData = metaDataHandler;<br />            stream.client = customClient;<br />            stream.bufferTime = BUFFER_TIME;<br />            video = new Video();<br />            video.attachNetStream(stream);<br />            video.smoothing = true;<br /><br /><br /><br />            this.visible = false;<br />            addChild(video);<br />            addChild(poster);<br />            addChild(controls);<br /><br />            progressTimer = new Timer(PROGRESS_TIMER_DELAY, 0);<br />            progressTimer.addEventListener(TimerEvent.TIMER, onProgressTimer);<br /><br /><br /><br />            connection.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);<br />            stream.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler);<br />            addEventListener(Event.REMOVED_FROM_STAGE, onRemoved);<br />            poster.addEventListener(MouseEvent.CLICK, onPosterClick);<br />            poster.addEventListener(MouseEvent.MOUSE_OVER, function():void { poster.alpha = 1; });<br />            poster.addEventListener(MouseEvent.MOUSE_OUT, function():void { poster.alpha = .9; });<br />        }<br /><br /><br /><br /><br /><br /><br /><br />        Loads video from url. </div><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Parameters:</span><div class="item"><div class="floatbox code colorizedCode">url     <span class="itemSeparator">:</span></div><div>Video url</div></div><div class="item"><div class="floatbox code colorizedCode">autoPlay<span class="itemSeparator">:</span></div><div>Sets autoPlay boolean</div></div></div></div></div></div><div class="member" id="pauseVideo"><h3>pauseVideo</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>pauseVideo</b> (
-</div><div class="code">) : void</div><br class="clear" /></div></div><div class="description">         Pauses playback. </div></div><div class="member" id="playVideo"><h3>playVideo</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>playVideo</b> (
-</div><div class="code">url:String = null) : void</div><br class="clear" /></div></div><div class="description">         Starts playback. </div><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Parameters:</span><div class="item"><div class="floatbox code colorizedCode">url<span class="itemSeparator">:</span></div><div>Video url (only used when no video is loaded)</div></div></div></div></div></div><div class="member" id="resumeVideo"><h3>resumeVideo</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>resumeVideo</b> (
-</div><div class="code">) : void</div><br class="clear" /></div></div><div class="description">         Resumes playback. </div></div><div class="member" id="rewindVideo"><h3>rewindVideo</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>rewindVideo</b> (
-</div><div class="code">) : void</div><br class="clear" /></div></div><div class="description">         Returns and pauses playback to start of video. </div></div><div class="member" id="seekVideo"><h3>seekVideo</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>seekVideo</b> (
-</div><div class="code">p:Number) : void</div><br class="clear" /></div></div><div class="description">         Sets playhead to a percentage of the video's duration. </div><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Parameters:</span><div class="item"><div class="floatbox code colorizedCode">p<span class="itemSeparator">:</span></div><div>Percentage of video duration</div></div></div></div></div></div></div><div class="footer"><ul class="docFooter"><li class="copyright">&copy; John Polacek, johnpolacek.com</li><li class="createdWith">Created with <a href="http://visiblearea.com/visdoc/">VisDoc</a></li></ul></div></div></div></body></html>
+								<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>See also</span>
+				<div class='item'>
+					<ul>
+								<li>
+					<a href="com_johnpolacek_ui_ProgressBar.html">com.johnpolacek.ui.ProgressBar</a>									</li>
+								<li>
+					<a href="com_johnpolacek_ui_PlayPauseButton.html">com.johnpolacek.ui.PlayPauseButton</a>									</li>
+								<li>
+					<a href="com_johnpolacek_ui_VolumeControl.html">com.johnpolacek.ui.VolumeControl</a>									</li>
+							</ul>			</div>
+					</div>
+	</div>
+
+								<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Events broadcasted to listeners</span>
+				<div class='item'>
+					<ul>
+								<li>
+					Event.COMPLETE  # When load is complete.									</li>
+								<li>
+					UIEvent.PLAYBACK_START  # When playback starts.									</li>
+								<li>
+					UIEvent.PLAYBACK_FINISH  # When playback finishes.									</li>
+							</ul>			</div>
+					</div>
+	</div>
+
+					</div>
+	</div></div>
+
+									<div class='toc'>
+		<h2 id='Summary'>Summary</h2>
+		<div class='docNav'>
+			<ul>
+									<li>
+						<span class='typeInfoHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide type info</a></span>
+						<span class='typeInfoShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show type info</a></span>
+					</li>									<li>
+						<span class='summariesHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide summaries</a></span>
+						<span class='summariesShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show summaries</a></span>
+					</li>			</ul>
+			<div class='clear'></div>
+		</div>
+				<div class='memberList'>
+							<div class='memberSummaryPart'>
+					<span class='title'>Constructor</span>
+					<ul>
+													<li class=''>								
+								<a href="#VideoStreamPlayer">VideoStreamPlayer</a>
+																<span class='typeInfo'>()</span>															</li>
+											</ul>
+									</div>
+							<div class='memberSummaryPart'>
+					<span class='title'>Instance properties</span>
+					<ul>
+													<li class=''>								
+								<a href="#buttonColor">buttonColor</a>
+																<span class='typeInfo'> : uint</span>																<ul class='summary'>
+									<li>Color of player buttons. </li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#backgroundColor">backgroundColor</a>
+																<span class='typeInfo'> : uint</span>																<ul class='summary'>
+									<li>Color of player background. </li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#autoPlay">autoPlay</a>
+																<span class='typeInfo'> : Boolean</span>																<ul class='summary'>
+									<li>Default is false.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#autoRewind">autoRewind</a>
+																<span class='typeInfo'> : Boolean</span>																<ul class='summary'>
+									<li>Default is true.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#poster">poster</a>
+																<span class='typeInfo'> : Sprite</span>																<ul class='summary'>
+									<li>Optional poster image that displays before video is played.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#controls">controls</a>
+																<span class='typeInfo'> : Sprite</span>																<ul class='summary'>
+									<li>Video controls sprite.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#controlsOutside">controlsOutside</a>
+																<span class='typeInfo'> : Boolean</span>																<ul class='summary'>
+									<li>Boolean determines if controller is inside or outside the video. </li>
+								</ul>							</li>
+											</ul>
+									</div>
+							<div class='memberSummaryPart'>
+					<span class='title'>Instance methods</span>
+					<ul>
+													<li class=''>								
+								<a href="#loadVideo">loadVideo</a>
+																<span class='typeInfo'>(url:String, videoAutoPlay:Boolean = false) : void</span>																<ul class='summary'>
+									<li>Loads video from url.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#playVideo">playVideo</a>
+																<span class='typeInfo'>(url:String = null) : void</span>																<ul class='summary'>
+									<li>Starts playback.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#pauseVideo">pauseVideo</a>
+																<span class='typeInfo'>() : void</span>																<ul class='summary'>
+									<li>Pauses playback.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#resumeVideo">resumeVideo</a>
+																<span class='typeInfo'>() : void</span>																<ul class='summary'>
+									<li>Resumes playback.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#rewindVideo">rewindVideo</a>
+																<span class='typeInfo'>() : void</span>																<ul class='summary'>
+									<li>Returns and pauses playback to start of video.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#seekVideo">seekVideo</a>
+																<span class='typeInfo'>(p:Number) : void</span>																<ul class='summary'>
+									<li>Sets playhead to a percentage of the video's duration.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#addPoster">addPoster</a>
+																<span class='typeInfo'>(filepath:String) : void</span>															</li>
+													<li class=''>								
+								<a href="#addController">addController</a>
+																<span class='typeInfo'>() : void</span>															</li>
+													<li class=''>								
+								<a href="#autoHideController">autoHideController</a>
+																<span class='typeInfo'>() : void</span>																<ul class='summary'>
+									<li>Moves controller inside the video player and hides on MOUSE_OUT</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#destroy">destroy</a>
+																<span class='typeInfo'>() : void</span>															</li>
+											</ul>
+									</div>
+					</div>	</div>
+																					<div class='memberSection'>
+			<h2 id='Constructor'>Constructor</h2>
+							<div class='member' id='VideoStreamPlayer'>
+									<h3>VideoStreamPlayer</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>VideoStreamPlayer</strong>()</span>						</div>														</div>
+					</div>
+				<div class='memberSection'>
+			<h2 id='Instanceproperties'>Instance properties</h2>
+							<div class='member' id='autoPlay'>
+									<h3>autoPlay</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>autoPlay</strong>:Boolean = false</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Default is false.</p>						</div>									</div>
+							<div class='member' id='autoRewind'>
+									<h3>autoRewind</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>autoRewind</strong>:Boolean = true</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Default is true.</p>						</div>									</div>
+							<div class='member' id='backgroundColor'>
+									<h3>backgroundColor</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>backgroundColor</strong>:uint = 0x000000</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Color of player background. Default is 0x000000</p>						</div>									</div>
+							<div class='member' id='buttonColor'>
+									<h3>buttonColor</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>buttonColor</strong>:uint = 0xFFFFFF</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Color of player buttons. Default is 0xFFFFFF</p>						</div>									</div>
+							<div class='member' id='controls'>
+									<h3>controls</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>controls</strong>:Sprite = new Sprite()</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Video controls sprite.</p>						</div>									</div>
+							<div class='member' id='controlsOutside'>
+									<h3>controlsOutside</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>controlsOutside</strong>:Boolean = false</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Boolean determines if controller is inside or outside the video. Default is true.</p>						</div>									</div>
+							<div class='member' id='poster'>
+									<h3>poster</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>poster</strong>:Sprite = new Sprite()</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Optional poster image that displays before video is played.</p>						</div>									</div>
+					</div>
+				<div class='memberSection'>
+			<h2 id='Instancemethods'>Instance methods</h2>
+							<div class='member' id='addController'>
+									<h3>addController</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>addController</strong>() : void</span>						</div>														</div>
+							<div class='member' id='addPoster'>
+									<h3>addPoster</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>addPoster</strong>(filepath:String) : void</span>						</div>														</div>
+							<div class='member' id='autoHideController'>
+									<h3>autoHideController</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>autoHideController</strong>() : void</span>						</div>											<div class='description'>
+																			<p>Moves controller inside the video player and hides on MOUSE_OUT</p>						</div>									</div>
+							<div class='member' id='destroy'>
+									<h3>destroy</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>destroy</strong>() : void</span>						</div>														</div>
+							<div class='member' id='loadVideo'>
+									<h3>loadVideo</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>loadVideo</strong>(url:String,
+                   videoAutoPlay:Boolean = false) : void</span>						</div>											<div class='description'>
+																			<p>Loads video from url.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='pauseVideo'>
+									<h3>pauseVideo</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>pauseVideo</strong>() : void</span>						</div>											<div class='description'>
+																			<p>Pauses playback.</p>						</div>									</div>
+							<div class='member' id='playVideo'>
+									<h3>playVideo</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>playVideo</strong>(url:String = null) : void</span>						</div>											<div class='description'>
+																			<p>Starts playback.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		<span class='colorizedCode code'>url<span class='itemSeparator'>:</span></span>Video url (only used when no video is loaded)	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='resumeVideo'>
+									<h3>resumeVideo</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>resumeVideo</strong>() : void</span>						</div>											<div class='description'>
+																			<p>Resumes playback.</p>						</div>									</div>
+							<div class='member' id='rewindVideo'>
+									<h3>rewindVideo</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>rewindVideo</strong>() : void</span>						</div>											<div class='description'>
+																			<p>Returns and pauses playback to start of video.</p>						</div>									</div>
+							<div class='member' id='seekVideo'>
+									<h3>seekVideo</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>seekVideo</strong>(p:Number) : void</span>						</div>											<div class='description'>
+																			<p>Sets playhead to a percentage of the video's duration.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		<span class='colorizedCode code'>p<span class='itemSeparator'>:</span></span>Percentage of video duration	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+					</div>
+		
+							</div>
+						</div>
+											<div id='sidebar'>
+		<div id='clearHeaderLeft'></div> 
+		<div id='sidebarContent'>
+				<div class="list">
+							<ul>
+		<li  class=''>											<li id='menu_index' class=''>				<a href="index.html">code.johnpolacek.com | docs</a>
+</li>
+						</li>
+</ul>
+
+					<ul id='treemenu'>
+		<li  class=''>									<h2>Packages and classes</h2>											<ul>
+		<li  id='menu_package_com_johnpolacek_animation' class='package'>
+																	<a href="package_com_johnpolacek_animation.html">com.johnpolacek.animation</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_animation_AutoSlideShow' class=''>				<a href="com_johnpolacek_animation_AutoSlideShow.html"><span class='packagePath'>com.johnpolacek.animation.</span>AutoSlideShow</a>
+</li>
+							<li id='menu_com_johnpolacek_animation_PreloadAnimationCircles' class=''>				<a href="com_johnpolacek_animation_PreloadAnimationCircles.html"><span class='packagePath'>com.johnpolacek.animation.</span>PreloadAnimationCircles</a>
+</li>
+							<li id='menu_com_johnpolacek_animation_PreloadAnimationSquares' class=''>				<a href="com_johnpolacek_animation_PreloadAnimationSquares.html"><span class='packagePath'>com.johnpolacek.animation.</span>PreloadAnimationSquares</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_application' class='package'>
+																	<a href="package_com_johnpolacek_application.html">com.johnpolacek.application</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_application_BriefingRoom' class=''>				<a href="com_johnpolacek_application_BriefingRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>BriefingRoom</a>
+</li>
+							<li id='menu_com_johnpolacek_application_BriefingRoomFormat' class=''>				<a href="com_johnpolacek_application_BriefingRoomFormat.html"><span class='packagePath'>com.johnpolacek.application.</span>BriefingRoomFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_application_BriefingRoomNav' class=''>				<a href="com_johnpolacek_application_BriefingRoomNav.html"><span class='packagePath'>com.johnpolacek.application.</span>BriefingRoomNav</a>
+</li>
+							<li id='menu_com_johnpolacek_application_CaseStudy' class=''>				<a href="com_johnpolacek_application_CaseStudy.html"><span class='packagePath'>com.johnpolacek.application.</span>CaseStudy</a>
+</li>
+							<li id='menu_com_johnpolacek_application_FullScreenSite' class=''>				<a href="com_johnpolacek_application_FullScreenSite.html"><span class='packagePath'>com.johnpolacek.application.</span>FullScreenSite</a>
+</li>
+							<li id='menu_com_johnpolacek_application_MediaRoom' class=''>				<a href="com_johnpolacek_application_MediaRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>MediaRoom</a>
+</li>
+							<li id='menu_com_johnpolacek_application_ReadingRoom' class=''>				<a href="com_johnpolacek_application_ReadingRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>ReadingRoom</a>
+</li>
+							<li id='menu_com_johnpolacek_application_SiteFormat' class=''>				<a href="com_johnpolacek_application_SiteFormat.html"><span class='packagePath'>com.johnpolacek.application.</span>SiteFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_application_ViewingRoom' class=''>				<a href="com_johnpolacek_application_ViewingRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>ViewingRoom</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_components' class='package'>
+																	<a href="package_com_johnpolacek_components.html">com.johnpolacek.components</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_components_ButtonGrid' class=''>				<a href="com_johnpolacek_components_ButtonGrid.html"><span class='packagePath'>com.johnpolacek.components.</span>ButtonGrid</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ContentContainer' class=''>				<a href="com_johnpolacek_components_ContentContainer.html"><span class='packagePath'>com.johnpolacek.components.</span>ContentContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ContentPanel' class=''>				<a href="com_johnpolacek_components_ContentPanel.html"><span class='packagePath'>com.johnpolacek.components.</span>ContentPanel</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ContentPanelFormat' class=''>				<a href="com_johnpolacek_components_ContentPanelFormat.html"><span class='packagePath'>com.johnpolacek.components.</span>ContentPanelFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_components_GridGallery' class=''>				<a href="com_johnpolacek_components_GridGallery.html"><span class='packagePath'>com.johnpolacek.components.</span>GridGallery</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ImageGrid' class=''>				<a href="com_johnpolacek_components_ImageGrid.html"><span class='packagePath'>com.johnpolacek.components.</span>ImageGrid</a>
+</li>
+							<li id='menu_com_johnpolacek_components_Lightbox' class=''>				<a href="com_johnpolacek_components_Lightbox.html"><span class='packagePath'>com.johnpolacek.components.</span>Lightbox</a>
+</li>
+							<li id='menu_com_johnpolacek_components_LightboxContentInfo' class=''>				<a href="com_johnpolacek_components_LightboxContentInfo.html"><span class='packagePath'>com.johnpolacek.components.</span>LightboxContentInfo</a>
+</li>
+							<li id='menu_com_johnpolacek_components_LightboxFormat' class=''>				<a href="com_johnpolacek_components_LightboxFormat.html"><span class='packagePath'>com.johnpolacek.components.</span>LightboxFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_components_LightboxWindow' class=''>				<a href="com_johnpolacek_components_LightboxWindow.html"><span class='packagePath'>com.johnpolacek.components.</span>LightboxWindow</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_container' class='package'>
+																	<a href="package_com_johnpolacek_container.html">com.johnpolacek.container</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_container_ChromeContainer' class=''>				<a href="com_johnpolacek_container_ChromeContainer.html"><span class='packagePath'>com.johnpolacek.container.</span>ChromeContainer</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_display' class='package'>
+																	<a href="package_com_johnpolacek_display.html">com.johnpolacek.display</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_display_AudioDisplay' class=''>				<a href="com_johnpolacek_display_AudioDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>AudioDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_AutoSlideShowDisplay' class=''>				<a href="com_johnpolacek_display_AutoSlideShowDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>AutoSlideShowDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_ContentDisplay' class=''>				<a href="com_johnpolacek_display_ContentDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>ContentDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_ContentDisplayCreator' class=''>				<a href="com_johnpolacek_display_ContentDisplayCreator.html"><span class='packagePath'>com.johnpolacek.display.</span>ContentDisplayCreator</a>
+</li>
+							<li id='menu_com_johnpolacek_display_FlashDisplay' class=''>				<a href="com_johnpolacek_display_FlashDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>FlashDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_ImageDisplay' class=''>				<a href="com_johnpolacek_display_ImageDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>ImageDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_VideoDisplay' class=''>				<a href="com_johnpolacek_display_VideoDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>VideoDisplay</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_events' class='package'>
+																	<a href="package_com_johnpolacek_events.html">com.johnpolacek.events</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_events_LightboxEvent' class=''>				<a href="com_johnpolacek_events_LightboxEvent.html"><span class='packagePath'>com.johnpolacek.events.</span>LightboxEvent</a>
+</li>
+							<li id='menu_com_johnpolacek_events_TrackEvent' class=''>				<a href="com_johnpolacek_events_TrackEvent.html"><span class='packagePath'>com.johnpolacek.events.</span>TrackEvent</a>
+</li>
+							<li id='menu_com_johnpolacek_events_UIEvent' class=''>				<a href="com_johnpolacek_events_UIEvent.html"><span class='packagePath'>com.johnpolacek.events.</span>UIEvent</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_media' class='package'>
+																	<a href="package_com_johnpolacek_media.html">com.johnpolacek.media</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_media_AudioPlayer' class=''>				<a href="com_johnpolacek_media_AudioPlayer.html"><span class='packagePath'>com.johnpolacek.media.</span>AudioPlayer</a>
+</li>
+							<li id='menu_com_johnpolacek_media_AudioPlayerMenu' class=''>				<a href="com_johnpolacek_media_AudioPlayerMenu.html"><span class='packagePath'>com.johnpolacek.media.</span>AudioPlayerMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_media_FLVPlaybackContainer' class=''>				<a href="com_johnpolacek_media_FLVPlaybackContainer.html"><span class='packagePath'>com.johnpolacek.media.</span>FLVPlaybackContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_media_ImageStack' class=''>				<a href="com_johnpolacek_media_ImageStack.html"><span class='packagePath'>com.johnpolacek.media.</span>ImageStack</a>
+</li>
+							<li id='menu_com_johnpolacek_media_SoundLoop' class=''>				<a href="com_johnpolacek_media_SoundLoop.html"><span class='packagePath'>com.johnpolacek.media.</span>SoundLoop</a>
+</li>
+							<li id='menu_com_johnpolacek_media_SoundSpectrum' class=''>				<a href="com_johnpolacek_media_SoundSpectrum.html"><span class='packagePath'>com.johnpolacek.media.</span>SoundSpectrum</a>
+</li>
+							<li id='menu_com_johnpolacek_media_VideoObject' class=''>				<a href="com_johnpolacek_media_VideoObject.html"><span class='packagePath'>com.johnpolacek.media.</span>VideoObject</a>
+</li>
+							<li id='menu_com_johnpolacek_media_VideoStreamPlayer' class=''>				<a href="com_johnpolacek_media_VideoStreamPlayer.html"><span class='packagePath'>com.johnpolacek.media.</span>VideoStreamPlayer</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_presentation' class='package'>
+																	<a href="package_com_johnpolacek_presentation.html">com.johnpolacek.presentation</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_presentation_FullScreenPresentation' class=''>				<a href="com_johnpolacek_presentation_FullScreenPresentation.html"><span class='packagePath'>com.johnpolacek.presentation.</span>FullScreenPresentation</a>
+</li>
+							<li id='menu_com_johnpolacek_presentation_FullScreenTimelinePresentation' class=''>				<a href="com_johnpolacek_presentation_FullScreenTimelinePresentation.html"><span class='packagePath'>com.johnpolacek.presentation.</span>FullScreenTimelinePresentation</a>
+</li>
+							<li id='menu_com_johnpolacek_presentation_TimelinePresentation' class=''>				<a href="com_johnpolacek_presentation_TimelinePresentation.html"><span class='packagePath'>com.johnpolacek.presentation.</span>TimelinePresentation</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_shapes' class='package'>
+																	<a href="package_com_johnpolacek_shapes.html">com.johnpolacek.shapes</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_shapes_ArrowHead' class=''>				<a href="com_johnpolacek_shapes_ArrowHead.html"><span class='packagePath'>com.johnpolacek.shapes.</span>ArrowHead</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_BitmapNoiseRectangle' class=''>				<a href="com_johnpolacek_shapes_BitmapNoiseRectangle.html"><span class='packagePath'>com.johnpolacek.shapes.</span>BitmapNoiseRectangle</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_EllipseShape' class=''>				<a href="com_johnpolacek_shapes_EllipseShape.html"><span class='packagePath'>com.johnpolacek.shapes.</span>EllipseShape</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_Frame' class=''>				<a href="com_johnpolacek_shapes_Frame.html"><span class='packagePath'>com.johnpolacek.shapes.</span>Frame</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_Line' class=''>				<a href="com_johnpolacek_shapes_Line.html"><span class='packagePath'>com.johnpolacek.shapes.</span>Line</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_RectangleGradientShape' class=''>				<a href="com_johnpolacek_shapes_RectangleGradientShape.html"><span class='packagePath'>com.johnpolacek.shapes.</span>RectangleGradientShape</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_RectangleShape' class=''>				<a href="com_johnpolacek_shapes_RectangleShape.html"><span class='packagePath'>com.johnpolacek.shapes.</span>RectangleShape</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_text' class='package'>
+																	<a href="package_com_johnpolacek_text.html">com.johnpolacek.text</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_text_BasicTextBlock' class=''>				<a href="com_johnpolacek_text_BasicTextBlock.html"><span class='packagePath'>com.johnpolacek.text.</span>BasicTextBlock</a>
+</li>
+							<li id='menu_com_johnpolacek_text_FontsLoader' class=''>				<a href="com_johnpolacek_text_FontsLoader.html"><span class='packagePath'>com.johnpolacek.text.</span>FontsLoader</a>
+</li>
+							<li id='menu_com_johnpolacek_text_HTMLTextBlock' class=''>				<a href="com_johnpolacek_text_HTMLTextBlock.html"><span class='packagePath'>com.johnpolacek.text.</span>HTMLTextBlock</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_ui' class='package'>
+																	<a href="package_com_johnpolacek_ui.html">com.johnpolacek.ui</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_ui_AccordionMenu' class=''>				<a href="com_johnpolacek_ui_AccordionMenu.html"><span class='packagePath'>com.johnpolacek.ui.</span>AccordionMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_BasicButton' class=''>				<a href="com_johnpolacek_ui_BasicButton.html"><span class='packagePath'>com.johnpolacek.ui.</span>BasicButton</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_BasicButtonMenu' class=''>				<a href="com_johnpolacek_ui_BasicButtonMenu.html"><span class='packagePath'>com.johnpolacek.ui.</span>BasicButtonMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_DropDownButtonMenu' class=''>				<a href="com_johnpolacek_ui_DropDownButtonMenu.html"><span class='packagePath'>com.johnpolacek.ui.</span>DropDownButtonMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_FullScreenScrollbar' class=''>				<a href="com_johnpolacek_ui_FullScreenScrollbar.html"><span class='packagePath'>com.johnpolacek.ui.</span>FullScreenScrollbar</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_PlayPauseButton' class=''>				<a href="com_johnpolacek_ui_PlayPauseButton.html"><span class='packagePath'>com.johnpolacek.ui.</span>PlayPauseButton</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_ProgressBar' class=''>				<a href="com_johnpolacek_ui_ProgressBar.html"><span class='packagePath'>com.johnpolacek.ui.</span>ProgressBar</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_Scrollbar' class=''>				<a href="com_johnpolacek_ui_Scrollbar.html"><span class='packagePath'>com.johnpolacek.ui.</span>Scrollbar</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_Scrollbox' class=''>				<a href="com_johnpolacek_ui_Scrollbox.html"><span class='packagePath'>com.johnpolacek.ui.</span>Scrollbox</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_VolumeControl' class=''>				<a href="com_johnpolacek_ui_VolumeControl.html"><span class='packagePath'>com.johnpolacek.ui.</span>VolumeControl</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_utils' class='package'>
+																	<a href="package_com_johnpolacek_utils.html">com.johnpolacek.utils</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_utils_DisplayUtils' class=''>				<a href="com_johnpolacek_utils_DisplayUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>DisplayUtils</a>
+</li>
+							<li id='menu_com_johnpolacek_utils_PresentationUtils' class=''>				<a href="com_johnpolacek_utils_PresentationUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>PresentationUtils</a>
+</li>
+							<li id='menu_com_johnpolacek_utils_StringUtils' class=''>				<a href="com_johnpolacek_utils_StringUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>StringUtils</a>
+</li>
+							<li id='menu_com_johnpolacek_utils_TimelineUtils' class=''>				<a href="com_johnpolacek_utils_TimelineUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>TimelineUtils</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_widgets' class='package'>
+																	<a href="package_com_johnpolacek_widgets.html">com.johnpolacek.widgets</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_widgets_FlickrSearchDisplay' class=''>				<a href="com_johnpolacek_widgets_FlickrSearchDisplay.html"><span class='packagePath'>com.johnpolacek.widgets.</span>FlickrSearchDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_RolloverGrid' class=''>				<a href="com_johnpolacek_widgets_RolloverGrid.html"><span class='packagePath'>com.johnpolacek.widgets.</span>RolloverGrid</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_RolloverGridSquare' class=''>				<a href="com_johnpolacek_widgets_RolloverGridSquare.html"><span class='packagePath'>com.johnpolacek.widgets.</span>RolloverGridSquare</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_SocialMentionSearchResultContainer' class=''>				<a href="com_johnpolacek_widgets_SocialMentionSearchResultContainer.html"><span class='packagePath'>com.johnpolacek.widgets.</span>SocialMentionSearchResultContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_TwitterSearchResultContainer' class=''>				<a href="com_johnpolacek_widgets_TwitterSearchResultContainer.html"><span class='packagePath'>com.johnpolacek.widgets.</span>TwitterSearchResultContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_TwitterTicker' class=''>				<a href="com_johnpolacek_widgets_TwitterTicker.html"><span class='packagePath'>com.johnpolacek.widgets.</span>TwitterTicker</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_WidgetWithTabs' class=''>				<a href="com_johnpolacek_widgets_WidgetWithTabs.html"><span class='packagePath'>com.johnpolacek.widgets.</span>WidgetWithTabs</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+				</li>
+</ul>
+
+			</div>					<div class="globalNav">
+							<ul>
+									<li>
+						<li id='menu_all-packages' class=''>				<a href="all-packages.html">Package tree</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-classes' class=''>				<a href="all-classes.html">Classes</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-methods' class=''>				<a href="all-methods.html">Methods</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-constants' class=''>				<a href="all-constants.html">Constants</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-properties' class=''>				<a href="all-properties.html">Properties</a>
+</li>					</li>
+									<li>
+						<li class=''></li>					</li>
+							</ul>	</div>
+		</div>
+	</div>
+
+					</div>
+					<div class='clear'>&nbsp;</div> 
+				</div>
+			</div>
+			<div id='header'>
+				<div id='headerContentWrapper'>
+					<div id='headerContent'>
+						<ul id='headerButtons'>
+															<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>													</ul>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+	<div id="footerContent">
+		<ul>
+						<li class="copyright">
+				©2011, John Polacek. johnpolacek.com
+			</li>		</ul>
+	</div>
+</div>
+		</div>
+     </body>
+</html>

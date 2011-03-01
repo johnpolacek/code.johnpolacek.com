@@ -1,30 +1,707 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>ImageGrid</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" type="text/css" href="../css/VisDoc.css" /><script src="../js/jquery.js" type="text/javascript">//</script><script src="../js/common.js" type="text/javascript">//</script><script src="../js/doc.js" type="text/javascript">//</script></head><body id="page_com_johnpolacek_components_ImageGrid"><script type="text/javascript">VisDoc.initBody();</script><div id="PageTop"><!----></div><div class="VisDoc"><div class="content"><div class="docNav"><ul><li><div id="twistyTOC_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited activeWhenNotFramed"><a href="#"><span class="icon">+</span>Show TOC</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("twistyTOC_show");</script><div id="twistyTOC_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited activeWhenFramed"><a href="#"><span class="icon">&times;</span>Hide TOC</a></div><span id="twistyTOC_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("twistyTOC_hide");</script></li></ul><ul class="accessKeyLinks"><li><a href="#PageTop" accesskey="t"><span class="accessKey">T</span>op</a></li><li><a href="#Summary" accesskey="s"><span class="accessKey">S</span>ummary</a></li><li><a href="#Constructor" accesskey="c"><span class="accessKey">C</span>onstructors</a></li><li><a href="#Instanceproperties" accesskey="l">Instance <span class="accessKey">p</span>roperties</a></li><li><a href="#Instancemethods" accesskey="m">Instance <span class="accessKey">m</span>ethods</a></li><li><a href="#Eventhandlers" accesskey="e"><span class="accessKey">E</span>vent handlers</a></li></ul><br class="clear" /></div><h1>ImageGrid</h1><div class="classProperties"><table cellspacing="0"><tr><th align="left">Kind of class:</th><td>public class</td></tr><tr><th align="left">Package:</th><td><a class="className" href="package-com_johnpolacek_components.html">com.johnpolacek.components</a></td></tr><tr><th align="left">Inherits from:</th><td>Sprite</td></tr><tr><th align="left">Known subclasses:</th><td><ul><li><a class="className" href="com_johnpolacek_components_ButtonGrid.html">ButtonGrid</a></li></ul></td></tr><tr><th class="classDetails" align="left">Version:</th><td class="classDetails">7 Mar 2010</td></tr><tr><th class="classDetails" align="left">Author:</th><td class="classDetails">John Polacek, john@johnpolacek.com</td></tr><tr><th class="classDetails" align="left">Classpath:</th><td class="classDetails">com.johnpolacek.components.ImageGrid</td></tr><tr><th class="classDetails" align="left">File last modified:</th><td class="classDetails">Tuesday, 24 August 2010, 12:26:45</td></tr></table></div><div class="classDescription"><span class="descriptionSummary">Loads and arranges images in a grid</span><br /><i>NOTE: Images should be uniform in size.</i><div class="classFields"><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Example:</span><div class="item"><ul><li> <br />Create grid 4 images wide (images should be same size)<br /><br /><pre>
-<span class="codeKeyword">var</span> grid:ImageGrid = <span class="codeKeyword">new</span> ImageGrid(<span class="codeNumber">4</span>);</pre><br />create grid 4 images wide x 3 images high<br /><br /><pre>
-<span class="codeKeyword">var</span> grid:ImageGrid = <span class="codeKeyword">new</span> ImageGrid(<span class="codeNumber">4</span>, <span class="codeNumber">3</span>);</pre><br />create 4x3 grid, with 10 pixels spacing<br /><br /><pre>
-<span class="codeKeyword">var</span> grid:ImageGrid = <span class="codeKeyword">new</span> ImageGrid(<span class="codeNumber">4</span>, <span class="codeNumber">3</span>, <span class="codeNumber">10</span>);</pre><br />create array of image url's<br /><br /><pre>
-<span class="codeKeyword">var</span> images = [<span class="codeString">"img/image1.jpg"</span>,<span class="codeString">"img/image2.jpg"</span>...]; <span class="codeComment">// array of image url's</span>
-grid.loadImages(images);</pre> </li></ul></div></div></div><div class="boxedElem"><div class="contentHolder"><span class="title">See also:</span><div class="item"><ul><li> <span class="doesNotExist"> com.johnpolacek.display.ImageDisplay</span> </li></ul></div></div></div></div></div></div><div class="summary"><h2 id="Summary">Summary</h2><div class="docNav"><ul><li><div id="twistyTypeInfo_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">&times;</span>Hide type info</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleTypeInfo_on");</script><div id="twistyTypeInfo_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">+</span>Show type info</a></div><span id="twistyTypeInfo_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleTypeInfo_off");</script></li><li><div id="twistySummaries_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">&times;</span>Hide summaries</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSummaries_on");</script><div id="twistySummaries_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">+</span>Show summaries</a></div><span id="twistySummaries_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSummaries_off");</script></li><li><div id="twistySort_show" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">&times;</span>Sort by source order</a></div><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSort_on");</script><div id="twistySort_hide" class="twistyTrigger twikiUnvisited twikiMakeVisible twistyInited twistyRememberSetting"><a href="#"><span class="icon">+</span>Sort alphabetically</a></div><span id="twistySort_toggle" class="twistyContent"><!----></span><script type="text/javascript">twiki.JQueryTwistyPlugin.initId("toggleSort_off");</script></li></ul><br class="clear" /></div><div class="memberList"><div class="memberSummaryPart"><span class="title">Constructor</span><ul class="sortable" id="sortul1"><li class="sortli listnum1"><a href="#ImageGrid">ImageGrid</a><span class="typeInfo"> (w:int, h:int = 0, s:int = 0)</span></li></ul></div><div class="memberSummaryPart"><span class="title">Instance properties</span><ul class="sortable" id="sortul2"><li class="sortli listnum1"><a href="#gridWidth">gridWidth</a><span class="typeInfo">  : int</span><ul class="summary"><li>        Width of grid (i.e.</li></ul></li><li class="sortli listnum2"><a href="#gridHeight">gridHeight</a><span class="typeInfo">  : int</span><ul class="summary"><li>Height of grid (i.e.</li></ul></li><li class="sortli listnum3"><a href="#spacing">spacing</a><span class="typeInfo">  : int</span><ul class="summary"><li>Spacing between images (in pixels)</li></ul></li><li class="sortli listnum4"><a href="#rows">rows</a></li><li class="sortli listnum5"><a href="#cols">cols</a></li><li class="sortli listnum6"><a href="#xCount">xCount</a><span class="typeInfo">  : int</span><ul class="summary"><li>Tracks horizontal positioning during image loading</li></ul></li><li class="sortli listnum7"><a href="#yCount">yCount</a><span class="typeInfo">  : int</span><ul class="summary"><li>Tracks vertical positioning during image loading</li></ul></li><li class="sortli listnum8"><a href="#urlsToLoad">urlsToLoad</a></li><li class="sortli listnum9"><a href="#imagesLoaded">imagesLoaded</a><span class="typeInfo">  : int</span><ul class="summary"><li>Number of images loaded</li></ul></li><li class="sortli listnum10"><a href="#totalImages">totalImages</a><span class="typeInfo">  : int</span><ul class="summary"><li>Total number of images for the grid</li></ul></li><li class="sortli listnum11"><a href="#transitionDuration">transitionDuration</a><span class="typeInfo">  : Number</span><ul class="summary"><li>Duration of fade transition in when images are loaded.</li></ul></li><li class="sortli listnum12"><a href="#alignCenter">alignCenter</a><span class="typeInfo">  : Boolean</span><ul class="summary"><li>If true, grid is aligned to the center</li></ul></li></ul></div><div class="memberSummaryPart"><span class="title">Instance methods</span><ul class="sortable" id="sortul3"><li class="sortli listnum1"><a href="#loadImages">loadImages</a><span class="typeInfo"> (urls:Array) : void</span><ul class="summary"><li>        Loads multiple images into the grid</li></ul></li><li class="sortli listnum2"><a href="#loadImage">loadImage</a><span class="typeInfo"> (url:String) : void</span><ul class="summary"><li>        Loads a single image into the grid</li></ul></li><li class="sortli listnum3"><a href="#addImage">addImage</a><span class="typeInfo"> (image:Sprite) : void</span><ul class="summary"><li>        Adds a sprite into the grid (at the last position)</li></ul></li></ul></div><div class="memberSummaryPart"><span class="title">Event handlers</span><ul class="sortable" id="sortul4"><li class="sortli listnum1"><a href="#onIOError">onIOError</a><span class="typeInfo"> (event:IOErrorEvent) : void</span><ul class="summary"><li>        IOError handler</li></ul></li><li class="sortli listnum2"><a href="#onImageLoadComplete">onImageLoadComplete</a><span class="typeInfo"> (event:Event) : void</span><ul class="summary"><li>        Image load complete handler</li></ul></li></ul></div></div></div><div class="memberSection"><h2 id="Constructor">Constructor</h2><div class="member" id="ImageGrid"><h3>ImageGrid</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>ImageGrid</b> (
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" encoding="utf-8">
+	<head>
+		<title>ImageGrid | code.johnpolacek.com | docs</title>
+		<link rel="stylesheet" type="text/css" href="../css/shCoreDefault.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/VisDoc.min.css" />
+		<script type="text/javascript" src="../js/1_jquery.min.js"></script>
+		<script type="text/javascript" src="../js/2_jquery.cookie.min.js"></script>
+		<script type="text/javascript" src="../js/3_jquery.simpletreeview.min.js"></script>
+		<script type="text/javascript" src="../js/4_shCore.min.js"></script>
+		<script type="text/javascript" src="../js/5_shBrushAS3.min.js"></script>
+		<script type="text/javascript" src="../js/6_shBrushJava.min.js"></script>
+		<script type="text/javascript" src="../js/7_VisDoc.min.js"></script>
+	</head>
+	<body class='isShowingNavigation' id='page_com_johnpolacek_components_ImageGrid'>
+	    <div id='page'> 
+			<div id='wrapper'>
+				<div id='outer'> 
+					<div id='floatWrap'> 
+						<div id='main'>
+							<div id='clearHeaderCenter'></div> 
+							<div id='mainContent'>
+																<h1>ImageGrid</h1>									<div class='classProperties'>
+		<table cellspacing='0'>
+				<tr>
+		<th>Kind of class:</th>
+		<td>public class</td>
+	</tr>
+							<tr>
+		<th>Package:</th>
+		<td>
+			<ul>
+								<li>			<a href="package_com_johnpolacek_components.html">com.johnpolacek.components</a>
+</li>
+							</ul>
+		</td>
+	</tr>
+							<tr>
+		<th>Inherits from:</th>
+		<td>
+			<ul>
+								<li>			Sprite</li>
+							</ul>
+		</td>
+	</tr>
+										<tr>
+		<th>Known subclasses:</th>
+		<td>
+			<ul>
+								<li>			<a href="com_johnpolacek_components_ButtonGrid.html">ButtonGrid</a>
+</li>
+							</ul>
+		</td>
+	</tr>
+							<tr>
+		<th class='classDetails'>Version:</th>
+		<td class='classDetails'>7 Mar 2010</td>
+	</tr>
+	<tr>
+		<th class='classDetails'>Author:</th>
+		<td class='classDetails'>John Polacek, john@johnpolacek.com</td>
+	</tr>
+	<tr>
+		<th class='classDetails'>Classpath:</th>
+		<td class='classDetails'>com.johnpolacek.components.ImageGrid</td>
+	</tr>
+	<tr>
+		<th class='classDetails'>File last modified:</th>
+		<td class='classDetails'>Thursday, 24 February 2011, 22:09:57</td>
+	</tr>
+		</table>
+	</div>
+		<div class='classDescription'>
+	<span class='descriptionSummary'>Loads and arranges images in a grid</span>	
+<i>NOTE: Images should be uniform in size.</i>	<div class='classFields'>
+		<div class='boxWithBorder'>
+								<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Example</span>
+				<div class='item'>
+					<ul>
+								<li>
+					<br />
+Create grid 4 images wide (images should be same size)
+<code><span class="codeKeyword">var</span> grid:ImageGrid = <span class="codeKeyword">new</span> ImageGrid(<span class="codeNumber">4</span>);</code>
 
+create grid 4 images wide x 3 images high
+<code><span class="codeKeyword">var</span> grid:ImageGrid = <span class="codeKeyword">new</span> ImageGrid(<span class="codeNumber">4</span>, <span class="codeNumber">3</span>);</code>
 
-</div><div class="code">w:int,
-h:int = 0,
-s:int = 0)</div><br class="clear" /></div></div><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Parameters:</span><div class="item"><div class="floatbox code colorizedCode">w<span class="itemSeparator">:</span></div><div>Sets grid width (number of images wide)</div></div><div class="item"><div class="floatbox code colorizedCode">h<span class="itemSeparator">:</span></div><div>Sets grid height (number of images tall)</div></div><div class="item"><div class="floatbox code colorizedCode">s<span class="itemSeparator">:</span></div><div>Sets grid spacing between sprites in pixels (default is 0)</div></div></div></div></div></div></div><div class="memberSection"><h2 id="Instanceproperties">Instance properties</h2><div class="member" id="alignCenter"><h3>alignCenter</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>alignCenter</b>:Boolean = <span class="codeIdentifier">false</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> If true, grid is aligned to the center </div></div><div class="member" id="cols"><h3>cols</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>cols</b> = []
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Multidimensional array of images divided into columns </div></div><div class="member" id="gridHeight"><h3>gridHeight</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>gridHeight</b>:int
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Height of grid (i.e. 4 images wide) </div></div><div class="member" id="gridWidth"><h3>gridWidth</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>gridWidth</b>:int
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description">         Width of grid (i.e. 4 images wide) </div></div><div class="member" id="imagesLoaded"><h3>imagesLoaded</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>imagesLoaded</b>:int = <span class="codeNumber">0</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Number of images loaded </div></div><div class="member" id="rows"><h3>rows</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>rows</b> = []
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Multidimensional array of images divided into rows </div></div><div class="member" id="spacing"><h3>spacing</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>spacing</b>:int
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Spacing between images (in pixels) </div></div><div class="member" id="totalImages"><h3>totalImages</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>totalImages</b>:int = <span class="codeNumber">0</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Total number of images for the grid </div></div><div class="member" id="transitionDuration"><h3>transitionDuration</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>transitionDuration</b>:Number = <span class="codeNumber">0</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Duration of fade transition in when images are loaded. Default is 0 (no transition). </div></div><div class="member" id="urlsToLoad"><h3>urlsToLoad</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>urlsToLoad</b> = []
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Array of image url's being loaded </div></div><div class="member" id="xCount"><h3>xCount</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>xCount</b>:int = <span class="codeNumber">0</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Tracks horizontal positioning during image loading </div></div><div class="member" id="yCount"><h3>yCount</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> <b>yCount</b>:int = <span class="codeNumber">0</span>
-</div><div class="floatbox"><span class="access">(read,write)</span></div><br class="clear" /></div></div><div class="description"> Tracks vertical positioning during image loading </div></div></div><div class="memberSection"><h2 id="Instancemethods">Instance methods</h2><div class="member" id="addImage"><h3>addImage</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>addImage</b> (
-</div><div class="code">image:Sprite) : void</div><br class="clear" /></div></div><div class="description">         Adds a sprite into the grid (at the last position) </div><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Parameters:</span><div class="item"><div class="floatbox code colorizedCode">url<span class="itemSeparator">:</span></div><div>Image URL string to load</div></div></div></div></div></div><div class="member" id="loadImage"><h3>loadImage</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>loadImage</b> (
-</div><div class="code">url:String) : void</div><br class="clear" /></div></div><div class="description">         Loads a single image into the grid </div><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Parameters:</span><div class="item"><div class="floatbox code colorizedCode">url<span class="itemSeparator">:</span></div><div>Image URL string to load</div></div></div></div></div></div><div class="member" id="loadImages"><h3>loadImages</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>loadImages</b> (
-</div><div class="code">urls:Array) : void</div><br class="clear" /></div></div><div class="description">         Loads multiple images into the grid </div><div class="boxWithBorder"><div class="boxedElem"><div class="contentHolder"><span class="title">Parameters:</span><div class="item"><div class="floatbox code colorizedCode">urls<span class="itemSeparator">:</span></div><div>Array of image URL strings to load</div></div></div></div></div></div></div><div class="memberSection"><h2 id="Eventhandlers">Event handlers</h2><div class="member" id="onImageLoadComplete"><h3>onImageLoadComplete</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>onImageLoadComplete</b> (
-</div><div class="code">event:Event) : void</div><br class="clear" /></div></div><div class="description">         Image load complete handler </div></div><div class="member" id="onIOError"><h3>onIOError</h3><div class="fullMemberString"><div class="floatholder"><div class="floatbox code"><span class="memberAccess">public</span> function <b>onIOError</b> (
-</div><div class="code">event:IOErrorEvent) : void</div><br class="clear" /></div></div><div class="description">         IOError handler </div></div></div><div class="footer"><ul class="docFooter"><li class="copyright">&copy; John Polacek, johnpolacek.com</li><li class="createdWith">Created with <a href="http://visiblearea.com/visdoc/">VisDoc</a></li></ul></div></div></div></body></html>
+create 4x3 grid, with 10 pixels spacing
+<code><span class="codeKeyword">var</span> grid:ImageGrid = <span class="codeKeyword">new</span> ImageGrid(<span class="codeNumber">4</span>, <span class="codeNumber">3</span>, <span class="codeNumber">10</span>);</code>
+
+create array of image url's
+<pre>
+var images = [&quot;img/image1.jpg&quot;,&quot;img/image2.jpg&quot;...]; <span class="codeComment">// array of image url&#39;s</span>
+grid.loadImages(images);
+</pre>									</li>
+							</ul>			</div>
+					</div>
+	</div>
+
+								<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>See also</span>
+				<div class='item'>
+					<ul>
+								<li>
+					<a href="com_johnpolacek_display_ImageDisplay.html">com.johnpolacek.display.ImageDisplay</a>									</li>
+							</ul>			</div>
+					</div>
+	</div>
+
+					</div>
+	</div></div>
+
+									<div class='toc'>
+		<h2 id='Summary'>Summary</h2>
+		<div class='docNav'>
+			<ul>
+									<li>
+						<span class='typeInfoHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide type info</a></span>
+						<span class='typeInfoShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show type info</a></span>
+					</li>									<li>
+						<span class='summariesHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide summaries</a></span>
+						<span class='summariesShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show summaries</a></span>
+					</li>			</ul>
+			<div class='clear'></div>
+		</div>
+				<div class='memberList'>
+							<div class='memberSummaryPart'>
+					<span class='title'>Constructor</span>
+					<ul>
+													<li class=''>								
+								<a href="#ImageGrid">ImageGrid</a>
+																<span class='typeInfo'>(w:int, h:int, s:int)</span>															</li>
+											</ul>
+									</div>
+							<div class='memberSummaryPart'>
+					<span class='title'>Instance properties</span>
+					<ul>
+													<li class=''>								
+								<a href="#gridWidth">gridWidth</a>
+																<span class='typeInfo'> : int</span>																<ul class='summary'>
+									<li>Width of grid (i.e. </li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#gridHeight">gridHeight</a>
+																<span class='typeInfo'> : int</span>																<ul class='summary'>
+									<li>Height of grid (i.e. </li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#spacing">spacing</a>
+																<span class='typeInfo'> : int</span>																<ul class='summary'>
+									<li>Spacing between images (in pixels)</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#rows">rows</a>
+																								<ul class='summary'>
+									<li>Multidimensional array of images divided into rows</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#cols">cols</a>
+																								<ul class='summary'>
+									<li>Multidimensional array of images divided into columns</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#xCount">xCount</a>
+																<span class='typeInfo'> : int</span>																<ul class='summary'>
+									<li>Tracks horizontal positioning during image loading</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#yCount">yCount</a>
+																<span class='typeInfo'> : int</span>																<ul class='summary'>
+									<li>Tracks vertical positioning during image loading</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#urlsToLoad">urlsToLoad</a>
+																								<ul class='summary'>
+									<li>Array of image url's being loaded</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#imagesLoaded">imagesLoaded</a>
+																<span class='typeInfo'> : int</span>																<ul class='summary'>
+									<li>Number of images loaded</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#totalImages">totalImages</a>
+																<span class='typeInfo'> : int</span>																<ul class='summary'>
+									<li>Total number of images for the grid</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#transitionDuration">transitionDuration</a>
+																<span class='typeInfo'> : Number</span>																<ul class='summary'>
+									<li>Duration of fade transition in when images are loaded. </li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#alignCenter">alignCenter</a>
+																<span class='typeInfo'> : Boolean</span>																<ul class='summary'>
+									<li>If true, grid is aligned to the center</li>
+								</ul>							</li>
+											</ul>
+									</div>
+							<div class='memberSummaryPart'>
+					<span class='title'>Instance methods</span>
+					<ul>
+													<li class=''>								
+								<a href="#loadImages">loadImages</a>
+																<span class='typeInfo'>(urls:Array) : void</span>																<ul class='summary'>
+									<li>Loads multiple images into the grid</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#loadImage">loadImage</a>
+																<span class='typeInfo'>(url:String) : void</span>																<ul class='summary'>
+									<li>Loads a single image into the grid</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#addImage">addImage</a>
+																<span class='typeInfo'>(image:Sprite) : void</span>																<ul class='summary'>
+									<li>Adds a sprite into the grid (at the last position)</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#onIOError">onIOError</a>
+																<span class='typeInfo'>(event:IOErrorEvent) : void</span>																<ul class='summary'>
+									<li>IOError handler</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#onImageLoadComplete">onImageLoadComplete</a>
+																<span class='typeInfo'>(event:Event) : void</span>																<ul class='summary'>
+									<li>Image load complete handler</li>
+								</ul>							</li>
+											</ul>
+									</div>
+					</div>	</div>
+																					<div class='memberSection'>
+			<h2 id='Constructor'>Constructor</h2>
+							<div class='member' id='ImageGrid'>
+									<h3>ImageGrid</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>ImageGrid</strong>(w:int,
+                   h:int,
+                   s:int)</span>						</div>															<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+					</div>
+				<div class='memberSection'>
+			<h2 id='Instanceproperties'>Instance properties</h2>
+							<div class='member' id='alignCenter'>
+									<h3>alignCenter</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>alignCenter</strong>:Boolean = false</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>If true, grid is aligned to the center</p>						</div>									</div>
+							<div class='member' id='cols'>
+									<h3>cols</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>cols</strong> = []</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Multidimensional array of images divided into columns</p>						</div>									</div>
+							<div class='member' id='gridHeight'>
+									<h3>gridHeight</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>gridHeight</strong>:int</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Height of grid (i.e. 4 images wide)</p>						</div>									</div>
+							<div class='member' id='gridWidth'>
+									<h3>gridWidth</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>gridWidth</strong>:int</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Width of grid (i.e. 4 images wide)</p>						</div>									</div>
+							<div class='member' id='imagesLoaded'>
+									<h3>imagesLoaded</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>imagesLoaded</strong>:int</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Number of images loaded</p>						</div>									</div>
+							<div class='member' id='rows'>
+									<h3>rows</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>rows</strong> = []</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Multidimensional array of images divided into rows</p>						</div>									</div>
+							<div class='member' id='spacing'>
+									<h3>spacing</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>spacing</strong>:int</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Spacing between images (in pixels)</p>						</div>									</div>
+							<div class='member' id='totalImages'>
+									<h3>totalImages</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>totalImages</strong>:int</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Total number of images for the grid</p>						</div>									</div>
+							<div class='member' id='transitionDuration'>
+									<h3>transitionDuration</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>transitionDuration</strong>:Number</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Duration of fade transition in when images are loaded. Default is 0 (no transition).</p>						</div>									</div>
+							<div class='member' id='urlsToLoad'>
+									<h3>urlsToLoad</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>urlsToLoad</strong> = []</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Array of image url's being loaded</p>						</div>									</div>
+							<div class='member' id='xCount'>
+									<h3>xCount</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>xCount</strong>:int</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Tracks horizontal positioning during image loading</p>						</div>									</div>
+							<div class='member' id='yCount'>
+									<h3>yCount</h3>											<div class='fullMemberString'>
+							<span class='code'><strong>yCount</strong>:int</span><span class='access'>(read,write)</span>						</div>											<div class='description'>
+																			<p>Tracks vertical positioning during image loading</p>						</div>									</div>
+					</div>
+				<div class='memberSection'>
+			<h2 id='Instancemethods'>Instance methods</h2>
+							<div class='member' id='addImage'>
+									<h3>addImage</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>addImage</strong>(image:Sprite) : void</span>						</div>											<div class='description'>
+																			<p>Adds a sprite into the grid (at the last position)</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		<span class='colorizedCode code'>url<span class='itemSeparator'>:</span></span>Image URL string to load	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='loadImage'>
+									<h3>loadImage</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>loadImage</strong>(url:String) : void</span>						</div>											<div class='description'>
+																			<p>Loads a single image into the grid</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		<span class='colorizedCode code'>url<span class='itemSeparator'>:</span></span>Image URL string to load	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='loadImages'>
+									<h3>loadImages</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>loadImages</strong>(urls:Array) : void</span>						</div>											<div class='description'>
+																			<p>Loads multiple images into the grid</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		<span class='colorizedCode code'>urls<span class='itemSeparator'>:</span></span>Array of image URL strings to load	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='onIOError'>
+									<h3>onIOError</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>onIOError</strong>(event:IOErrorEvent) : void</span>						</div>											<div class='description'>
+																			<p>IOError handler</p>						</div>									</div>
+							<div class='member' id='onImageLoadComplete'>
+									<h3>onImageLoadComplete</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>onImageLoadComplete</strong>(event:Event) : void</span>						</div>											<div class='description'>
+																			<p>Image load complete handler</p>						</div>									</div>
+					</div>
+		
+							</div>
+						</div>
+											<div id='sidebar'>
+		<div id='clearHeaderLeft'></div> 
+		<div id='sidebarContent'>
+				<div class="list">
+							<ul>
+		<li  class=''>											<li id='menu_index' class=''>				<a href="index.html">code.johnpolacek.com | docs</a>
+</li>
+						</li>
+</ul>
+
+					<ul id='treemenu'>
+		<li  class=''>									<h2>Packages and classes</h2>											<ul>
+		<li  id='menu_package_com_johnpolacek_animation' class='package'>
+																	<a href="package_com_johnpolacek_animation.html">com.johnpolacek.animation</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_animation_AutoSlideShow' class=''>				<a href="com_johnpolacek_animation_AutoSlideShow.html"><span class='packagePath'>com.johnpolacek.animation.</span>AutoSlideShow</a>
+</li>
+							<li id='menu_com_johnpolacek_animation_PreloadAnimationCircles' class=''>				<a href="com_johnpolacek_animation_PreloadAnimationCircles.html"><span class='packagePath'>com.johnpolacek.animation.</span>PreloadAnimationCircles</a>
+</li>
+							<li id='menu_com_johnpolacek_animation_PreloadAnimationSquares' class=''>				<a href="com_johnpolacek_animation_PreloadAnimationSquares.html"><span class='packagePath'>com.johnpolacek.animation.</span>PreloadAnimationSquares</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_application' class='package'>
+																	<a href="package_com_johnpolacek_application.html">com.johnpolacek.application</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_application_BriefingRoom' class=''>				<a href="com_johnpolacek_application_BriefingRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>BriefingRoom</a>
+</li>
+							<li id='menu_com_johnpolacek_application_BriefingRoomFormat' class=''>				<a href="com_johnpolacek_application_BriefingRoomFormat.html"><span class='packagePath'>com.johnpolacek.application.</span>BriefingRoomFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_application_BriefingRoomNav' class=''>				<a href="com_johnpolacek_application_BriefingRoomNav.html"><span class='packagePath'>com.johnpolacek.application.</span>BriefingRoomNav</a>
+</li>
+							<li id='menu_com_johnpolacek_application_CaseStudy' class=''>				<a href="com_johnpolacek_application_CaseStudy.html"><span class='packagePath'>com.johnpolacek.application.</span>CaseStudy</a>
+</li>
+							<li id='menu_com_johnpolacek_application_FullScreenSite' class=''>				<a href="com_johnpolacek_application_FullScreenSite.html"><span class='packagePath'>com.johnpolacek.application.</span>FullScreenSite</a>
+</li>
+							<li id='menu_com_johnpolacek_application_MediaRoom' class=''>				<a href="com_johnpolacek_application_MediaRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>MediaRoom</a>
+</li>
+							<li id='menu_com_johnpolacek_application_ReadingRoom' class=''>				<a href="com_johnpolacek_application_ReadingRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>ReadingRoom</a>
+</li>
+							<li id='menu_com_johnpolacek_application_SiteFormat' class=''>				<a href="com_johnpolacek_application_SiteFormat.html"><span class='packagePath'>com.johnpolacek.application.</span>SiteFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_application_ViewingRoom' class=''>				<a href="com_johnpolacek_application_ViewingRoom.html"><span class='packagePath'>com.johnpolacek.application.</span>ViewingRoom</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_components' class='package'>
+																	<a href="package_com_johnpolacek_components.html">com.johnpolacek.components</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_components_ButtonGrid' class=''>				<a href="com_johnpolacek_components_ButtonGrid.html"><span class='packagePath'>com.johnpolacek.components.</span>ButtonGrid</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ContentContainer' class=''>				<a href="com_johnpolacek_components_ContentContainer.html"><span class='packagePath'>com.johnpolacek.components.</span>ContentContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ContentPanel' class=''>				<a href="com_johnpolacek_components_ContentPanel.html"><span class='packagePath'>com.johnpolacek.components.</span>ContentPanel</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ContentPanelFormat' class=''>				<a href="com_johnpolacek_components_ContentPanelFormat.html"><span class='packagePath'>com.johnpolacek.components.</span>ContentPanelFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_components_GridGallery' class=''>				<a href="com_johnpolacek_components_GridGallery.html"><span class='packagePath'>com.johnpolacek.components.</span>GridGallery</a>
+</li>
+							<li id='menu_com_johnpolacek_components_ImageGrid' class=''>				<a href="com_johnpolacek_components_ImageGrid.html"><span class='packagePath'>com.johnpolacek.components.</span>ImageGrid</a>
+</li>
+							<li id='menu_com_johnpolacek_components_Lightbox' class=''>				<a href="com_johnpolacek_components_Lightbox.html"><span class='packagePath'>com.johnpolacek.components.</span>Lightbox</a>
+</li>
+							<li id='menu_com_johnpolacek_components_LightboxContentInfo' class=''>				<a href="com_johnpolacek_components_LightboxContentInfo.html"><span class='packagePath'>com.johnpolacek.components.</span>LightboxContentInfo</a>
+</li>
+							<li id='menu_com_johnpolacek_components_LightboxFormat' class=''>				<a href="com_johnpolacek_components_LightboxFormat.html"><span class='packagePath'>com.johnpolacek.components.</span>LightboxFormat</a>
+</li>
+							<li id='menu_com_johnpolacek_components_LightboxWindow' class=''>				<a href="com_johnpolacek_components_LightboxWindow.html"><span class='packagePath'>com.johnpolacek.components.</span>LightboxWindow</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_container' class='package'>
+																	<a href="package_com_johnpolacek_container.html">com.johnpolacek.container</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_container_ChromeContainer' class=''>				<a href="com_johnpolacek_container_ChromeContainer.html"><span class='packagePath'>com.johnpolacek.container.</span>ChromeContainer</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_display' class='package'>
+																	<a href="package_com_johnpolacek_display.html">com.johnpolacek.display</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_display_AudioDisplay' class=''>				<a href="com_johnpolacek_display_AudioDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>AudioDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_AutoSlideShowDisplay' class=''>				<a href="com_johnpolacek_display_AutoSlideShowDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>AutoSlideShowDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_ContentDisplay' class=''>				<a href="com_johnpolacek_display_ContentDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>ContentDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_ContentDisplayCreator' class=''>				<a href="com_johnpolacek_display_ContentDisplayCreator.html"><span class='packagePath'>com.johnpolacek.display.</span>ContentDisplayCreator</a>
+</li>
+							<li id='menu_com_johnpolacek_display_FlashDisplay' class=''>				<a href="com_johnpolacek_display_FlashDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>FlashDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_ImageDisplay' class=''>				<a href="com_johnpolacek_display_ImageDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>ImageDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_display_VideoDisplay' class=''>				<a href="com_johnpolacek_display_VideoDisplay.html"><span class='packagePath'>com.johnpolacek.display.</span>VideoDisplay</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_events' class='package'>
+																	<a href="package_com_johnpolacek_events.html">com.johnpolacek.events</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_events_LightboxEvent' class=''>				<a href="com_johnpolacek_events_LightboxEvent.html"><span class='packagePath'>com.johnpolacek.events.</span>LightboxEvent</a>
+</li>
+							<li id='menu_com_johnpolacek_events_TrackEvent' class=''>				<a href="com_johnpolacek_events_TrackEvent.html"><span class='packagePath'>com.johnpolacek.events.</span>TrackEvent</a>
+</li>
+							<li id='menu_com_johnpolacek_events_UIEvent' class=''>				<a href="com_johnpolacek_events_UIEvent.html"><span class='packagePath'>com.johnpolacek.events.</span>UIEvent</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_media' class='package'>
+																	<a href="package_com_johnpolacek_media.html">com.johnpolacek.media</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_media_AudioPlayer' class=''>				<a href="com_johnpolacek_media_AudioPlayer.html"><span class='packagePath'>com.johnpolacek.media.</span>AudioPlayer</a>
+</li>
+							<li id='menu_com_johnpolacek_media_AudioPlayerMenu' class=''>				<a href="com_johnpolacek_media_AudioPlayerMenu.html"><span class='packagePath'>com.johnpolacek.media.</span>AudioPlayerMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_media_FLVPlaybackContainer' class=''>				<a href="com_johnpolacek_media_FLVPlaybackContainer.html"><span class='packagePath'>com.johnpolacek.media.</span>FLVPlaybackContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_media_ImageStack' class=''>				<a href="com_johnpolacek_media_ImageStack.html"><span class='packagePath'>com.johnpolacek.media.</span>ImageStack</a>
+</li>
+							<li id='menu_com_johnpolacek_media_SoundLoop' class=''>				<a href="com_johnpolacek_media_SoundLoop.html"><span class='packagePath'>com.johnpolacek.media.</span>SoundLoop</a>
+</li>
+							<li id='menu_com_johnpolacek_media_SoundSpectrum' class=''>				<a href="com_johnpolacek_media_SoundSpectrum.html"><span class='packagePath'>com.johnpolacek.media.</span>SoundSpectrum</a>
+</li>
+							<li id='menu_com_johnpolacek_media_VideoObject' class=''>				<a href="com_johnpolacek_media_VideoObject.html"><span class='packagePath'>com.johnpolacek.media.</span>VideoObject</a>
+</li>
+							<li id='menu_com_johnpolacek_media_VideoStreamPlayer' class=''>				<a href="com_johnpolacek_media_VideoStreamPlayer.html"><span class='packagePath'>com.johnpolacek.media.</span>VideoStreamPlayer</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_presentation' class='package'>
+																	<a href="package_com_johnpolacek_presentation.html">com.johnpolacek.presentation</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_presentation_FullScreenPresentation' class=''>				<a href="com_johnpolacek_presentation_FullScreenPresentation.html"><span class='packagePath'>com.johnpolacek.presentation.</span>FullScreenPresentation</a>
+</li>
+							<li id='menu_com_johnpolacek_presentation_FullScreenTimelinePresentation' class=''>				<a href="com_johnpolacek_presentation_FullScreenTimelinePresentation.html"><span class='packagePath'>com.johnpolacek.presentation.</span>FullScreenTimelinePresentation</a>
+</li>
+							<li id='menu_com_johnpolacek_presentation_TimelinePresentation' class=''>				<a href="com_johnpolacek_presentation_TimelinePresentation.html"><span class='packagePath'>com.johnpolacek.presentation.</span>TimelinePresentation</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_shapes' class='package'>
+																	<a href="package_com_johnpolacek_shapes.html">com.johnpolacek.shapes</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_shapes_ArrowHead' class=''>				<a href="com_johnpolacek_shapes_ArrowHead.html"><span class='packagePath'>com.johnpolacek.shapes.</span>ArrowHead</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_BitmapNoiseRectangle' class=''>				<a href="com_johnpolacek_shapes_BitmapNoiseRectangle.html"><span class='packagePath'>com.johnpolacek.shapes.</span>BitmapNoiseRectangle</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_EllipseShape' class=''>				<a href="com_johnpolacek_shapes_EllipseShape.html"><span class='packagePath'>com.johnpolacek.shapes.</span>EllipseShape</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_Frame' class=''>				<a href="com_johnpolacek_shapes_Frame.html"><span class='packagePath'>com.johnpolacek.shapes.</span>Frame</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_Line' class=''>				<a href="com_johnpolacek_shapes_Line.html"><span class='packagePath'>com.johnpolacek.shapes.</span>Line</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_RectangleGradientShape' class=''>				<a href="com_johnpolacek_shapes_RectangleGradientShape.html"><span class='packagePath'>com.johnpolacek.shapes.</span>RectangleGradientShape</a>
+</li>
+							<li id='menu_com_johnpolacek_shapes_RectangleShape' class=''>				<a href="com_johnpolacek_shapes_RectangleShape.html"><span class='packagePath'>com.johnpolacek.shapes.</span>RectangleShape</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_text' class='package'>
+																	<a href="package_com_johnpolacek_text.html">com.johnpolacek.text</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_text_BasicTextBlock' class=''>				<a href="com_johnpolacek_text_BasicTextBlock.html"><span class='packagePath'>com.johnpolacek.text.</span>BasicTextBlock</a>
+</li>
+							<li id='menu_com_johnpolacek_text_FontsLoader' class=''>				<a href="com_johnpolacek_text_FontsLoader.html"><span class='packagePath'>com.johnpolacek.text.</span>FontsLoader</a>
+</li>
+							<li id='menu_com_johnpolacek_text_HTMLTextBlock' class=''>				<a href="com_johnpolacek_text_HTMLTextBlock.html"><span class='packagePath'>com.johnpolacek.text.</span>HTMLTextBlock</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_ui' class='package'>
+																	<a href="package_com_johnpolacek_ui.html">com.johnpolacek.ui</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_ui_AccordionMenu' class=''>				<a href="com_johnpolacek_ui_AccordionMenu.html"><span class='packagePath'>com.johnpolacek.ui.</span>AccordionMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_BasicButton' class=''>				<a href="com_johnpolacek_ui_BasicButton.html"><span class='packagePath'>com.johnpolacek.ui.</span>BasicButton</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_BasicButtonMenu' class=''>				<a href="com_johnpolacek_ui_BasicButtonMenu.html"><span class='packagePath'>com.johnpolacek.ui.</span>BasicButtonMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_DropDownButtonMenu' class=''>				<a href="com_johnpolacek_ui_DropDownButtonMenu.html"><span class='packagePath'>com.johnpolacek.ui.</span>DropDownButtonMenu</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_FullScreenScrollbar' class=''>				<a href="com_johnpolacek_ui_FullScreenScrollbar.html"><span class='packagePath'>com.johnpolacek.ui.</span>FullScreenScrollbar</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_PlayPauseButton' class=''>				<a href="com_johnpolacek_ui_PlayPauseButton.html"><span class='packagePath'>com.johnpolacek.ui.</span>PlayPauseButton</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_ProgressBar' class=''>				<a href="com_johnpolacek_ui_ProgressBar.html"><span class='packagePath'>com.johnpolacek.ui.</span>ProgressBar</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_Scrollbar' class=''>				<a href="com_johnpolacek_ui_Scrollbar.html"><span class='packagePath'>com.johnpolacek.ui.</span>Scrollbar</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_Scrollbox' class=''>				<a href="com_johnpolacek_ui_Scrollbox.html"><span class='packagePath'>com.johnpolacek.ui.</span>Scrollbox</a>
+</li>
+							<li id='menu_com_johnpolacek_ui_VolumeControl' class=''>				<a href="com_johnpolacek_ui_VolumeControl.html"><span class='packagePath'>com.johnpolacek.ui.</span>VolumeControl</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_utils' class='package'>
+																	<a href="package_com_johnpolacek_utils.html">com.johnpolacek.utils</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_utils_DisplayUtils' class=''>				<a href="com_johnpolacek_utils_DisplayUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>DisplayUtils</a>
+</li>
+							<li id='menu_com_johnpolacek_utils_PresentationUtils' class=''>				<a href="com_johnpolacek_utils_PresentationUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>PresentationUtils</a>
+</li>
+							<li id='menu_com_johnpolacek_utils_StringUtils' class=''>				<a href="com_johnpolacek_utils_StringUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>StringUtils</a>
+</li>
+							<li id='menu_com_johnpolacek_utils_TimelineUtils' class=''>				<a href="com_johnpolacek_utils_TimelineUtils.html"><span class='packagePath'>com.johnpolacek.utils.</span>TimelineUtils</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+							<ul>
+		<li  id='menu_package_com_johnpolacek_widgets' class='package'>
+																	<a href="package_com_johnpolacek_widgets.html">com.johnpolacek.widgets</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_johnpolacek_widgets_FlickrSearchDisplay' class=''>				<a href="com_johnpolacek_widgets_FlickrSearchDisplay.html"><span class='packagePath'>com.johnpolacek.widgets.</span>FlickrSearchDisplay</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_RolloverGrid' class=''>				<a href="com_johnpolacek_widgets_RolloverGrid.html"><span class='packagePath'>com.johnpolacek.widgets.</span>RolloverGrid</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_RolloverGridSquare' class=''>				<a href="com_johnpolacek_widgets_RolloverGridSquare.html"><span class='packagePath'>com.johnpolacek.widgets.</span>RolloverGridSquare</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_SocialMentionSearchResultContainer' class=''>				<a href="com_johnpolacek_widgets_SocialMentionSearchResultContainer.html"><span class='packagePath'>com.johnpolacek.widgets.</span>SocialMentionSearchResultContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_TwitterSearchResultContainer' class=''>				<a href="com_johnpolacek_widgets_TwitterSearchResultContainer.html"><span class='packagePath'>com.johnpolacek.widgets.</span>TwitterSearchResultContainer</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_TwitterTicker' class=''>				<a href="com_johnpolacek_widgets_TwitterTicker.html"><span class='packagePath'>com.johnpolacek.widgets.</span>TwitterTicker</a>
+</li>
+							<li id='menu_com_johnpolacek_widgets_WidgetWithTabs' class=''>				<a href="com_johnpolacek_widgets_WidgetWithTabs.html"><span class='packagePath'>com.johnpolacek.widgets.</span>WidgetWithTabs</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+				</li>
+</ul>
+
+			</div>					<div class="globalNav">
+							<ul>
+									<li>
+						<li id='menu_all-packages' class=''>				<a href="all-packages.html">Package tree</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-classes' class=''>				<a href="all-classes.html">Classes</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-methods' class=''>				<a href="all-methods.html">Methods</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-constants' class=''>				<a href="all-constants.html">Constants</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-properties' class=''>				<a href="all-properties.html">Properties</a>
+</li>					</li>
+									<li>
+						<li class=''></li>					</li>
+							</ul>	</div>
+		</div>
+	</div>
+
+					</div>
+					<div class='clear'>&nbsp;</div> 
+				</div>
+			</div>
+			<div id='header'>
+				<div id='headerContentWrapper'>
+					<div id='headerContent'>
+						<ul id='headerButtons'>
+															<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>													</ul>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+	<div id="footerContent">
+		<ul>
+						<li class="copyright">
+				©2011, John Polacek. johnpolacek.com
+			</li>		</ul>
+	</div>
+</div>
+		</div>
+     </body>
+</html>
