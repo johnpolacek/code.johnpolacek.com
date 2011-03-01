@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<title>Full Screen Site Demo</title>
+	
+	<sections>
+		<section id="section1" title="Section 1">section1.xml</section>
+		<section id="section2" title="Section 2">section2.xml</section>
+		<section id="section3" title="Section 3">section3.xml</section>
+	</sections>
+	
+	<tracking>
+		<code>UA-2821890-5</code>
+	</tracking>
+
+	<background>0xFFFFFF</background>
+
+	<margin>20</margin>
+	
+	<scrollbar>
+		<scrub>
+			<color>0xAAAAAA</color>
+			<alpha>1</alpha>
+		</scrub>
+		<track>
+			<color>0xDDDDDD</color>
+			<alpha>1</alpha>
+		</track>
+	</scrollbar>
+	
+	<fonts path="fonts/">
+		<font>GGSuperScript</font>
+		<font>GGSubScript</font>
+		<font>Andika</font>
+		<font>GoodDog</font>
+		<font>GentiumFamily</font>
+	</fonts>
+		
+	<header>
+		<width>800</width>
+		<margin>10</margin>
+		<spacing>10</spacing>
+		<background>
+			<color>0xDDDDDD</color>
+			<alpha>1</alpha>
+			<noise>2</noise>
+		</background>
+	</header>
+	
+	<nav>
+		<margin>5</margin>
+		<align>left</align>
+		<spacing>20</spacing>	
+		<indent>10</indent>
+		<background>
+			<color>0x999999</color>
+			<alpha>1</alpha>
+			<noise>0</noise>
+		</background>
+		<buttons>
+			<font>GoodDog</font>
+			<size>21</size>
+			<color>0x333333</color>
+		</buttons>
+	</nav>
+	
+	<sidebar>
+		<width>100</width>
+		<margin>0</margin>
+		<background>
+			<color>0xCCCCCC</color>
+			<noise>0</noise>
+			<alpha>1</alpha>
+		</background>
+	</sidebar>
+	
+	<footer>
+		<width>800</width>
+		<margin>10</margin>
+		<background>
+			<color>0x999999</color>
+			<noise>0</noise>
+			<alpha>1</alpha>
+		</background>
+	</footer>
+	
+	<lightbox>
+		<overlay>
+			<color>0xFFFFFF</color>
+			<alpha>.9</alpha>
+		</overlay>
+		<background>
+			<color>0x666666</color>
+			<dropshadow>.5</dropshadow>
+		</background>
+		<buttons>
+			<color>0x333333</color>
+		</buttons>
+		<text>
+			<title>
+				<font>GoodDog</font>
+				<size>16</size>
+				<color>0xCCCCCC</color>
+			</title>
+			<subtitle>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0xEEEEEE</color>
+			</subtitle>
+			<note>
+				<font>Gentium</font>
+				<style>italic</style>
+				<size>12</size>
+				<color>0xEEEEEE</color>
+			</note>
+			<audiotitle>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0xFFFFFF</color>
+			</audiotitle>
+			<audiosubtitle>
+				<font>Gentium</font>
+				<size>12</size>
+				<color>0x999999</color>
+			</audiosubtitle>
+		</text>
+	
+	</lightbox>
+	
+	<content path="content/">
+		<width>700</width>
+		<height>400</height>
+		<margin>10</margin>
+		<background>
+			<color>0xEFEFEF</color>
+			<noise>0</noise>
+			<alpha>1</alpha>
+		</background>
+		<linecolor>0xCCCCCC</linecolor>
+	</content>
+
+</site>

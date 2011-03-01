@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+    	<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		
+		<style type="text/css" media="screen">
+			html, body, #myContent	{ 
+				height:100%; 
+			}
+			
+			body
+			{
+				margin:0;
+				padding:0;
+				overflow:hidden;
+				background-color: #111;
+				color:#FFF;
+			}
+			
+			#myAlternativeContent		
+			{ 
+				/* style alt content */ 
+			}
+			
+			a:link 
+			{
+				color: #999;
+			}
+		</style>	
+        <script type="text/javascript" src="swfobject.js"></script>
+	</head>
+    
+	<body>
+        <table width="100%" height="100%">
+            <tr>
+                <td align="center" valign="middle">
+                    <div id="flash">
+                            <div id="myAlternativeContent">
+                                <p align="center">
+                                    This website is designed to be viewed on devices with flash player installed.
+                                    <br /><br /><br />
+                                    <a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" border="0" /></a>
+                                    <br /><br />
+                                </p>
+                          </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script>
+        var so = new SWFObject("briefingroom.swf", "main", "960", "560", "9", "#000000");
+        so.addParam("scale", "noscale");
+        so.addParam("salign", "lt");
+        so.addParam("align", "center");
+        so.addParam("allowScriptAccess", "always");
+        so.useExpressInstall('expressinstall.swf');
+        so.write("flash");
+        document.getElementById('main').focus();
+        </script>
+    </body>
+</html>

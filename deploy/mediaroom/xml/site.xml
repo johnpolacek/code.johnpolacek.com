@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+	<title>MediaRoom Demo</title>
+	
+	<tracking>
+		<code>UA-2821890-5</code>
+	</tracking>
+	
+	<content path="content/">
+		<media id="IntroVideo" name="Intro Video">video.flv</media>
+		<grouping name="Content Grouping">
+			<media id="Image" name="Image">image.jpg</media>
+			<media id="Slideshow" name="Image Slideshow">slide1.jpg,slide2.jpg,slide3.jpg</media>
+		</grouping>
+		<media id="TwitterSearch" name="Twitter Search">twitterbox.swf</media>
+		<media id="TwitterTicker" name="Twitter Ticker">twitterticker.swf</media>
+		<media id="DimmedButtonExample" name="Dimmed Button" dim="true">image.jpg</media>
+	</content>
+	
+	<nav>
+		<margin>20</margin>
+		<spacing>10</spacing>	
+		<tint>
+			<default>null</default>
+			<highlight>0xF58220</highlight>
+		</tint>
+		<graphic offsetx="4" offsety="4">arrow.png</graphic>
+		<subnav>
+			<spacing>0</spacing>	
+			<tint>
+				<default>0x999999</default>
+				<highlight>null</highlight>
+			</tint>
+		</subnav>
+	</nav>
+	
+	<footer>
+		<margin>10</margin>
+		<spacing>0</spacing>
+		<background>
+			<color>0xFFFFFF</color>
+			<noise>0</noise>
+			<alpha>1</alpha>
+		</background>
+	</footer>
+	
+	<snipe offsetx="-25" offsety="-50">icon.png</snipe>
+	
+	<fonts path="fonts/">
+		<font>GoodDog</font>
+		<font>GentiumFamily</font>
+		<font>GGSuperScript</font>
+		<font>GGSubScript</font>
+	</fonts>
+	
+</site>

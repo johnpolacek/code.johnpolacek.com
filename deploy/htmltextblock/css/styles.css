@@ -1,0 +1,27 @@
+p {
+	font-family:Gentium;
+	font-size:14;
+	color:#333333;
+	leading:4;
+	padding-top:10;
+}
+
+h1 {
+	font-family:Gentium;
+	font-weight:bold;
+	font-size:20;
+	color:#000000;
+	leading:0;	
+}
+
+a {
+	font-family:Gentium;
+	font-weight:bold;
+	font-style:italic;
+	color:#666666;
+	text-decoration:underline;
+}
+
+u {
+	text-decoration:underline;
+}

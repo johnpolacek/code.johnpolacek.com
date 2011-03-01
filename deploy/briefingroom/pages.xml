@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+		
+	<source>pages.swf</source>
+	
+	<title>Briefing Room Template</title>
+	
+	<tracking>
+		<code>UA-2821890-3</code>
+	</tracking>	
+	
+	<masthead>
+		<para>
+			<![CDATA[
+				<span class="title">BRIEFING ROOM</span><span class="subtitle"> TEMPLATE</span> 
+			]]>
+		</para>
+	</masthead>
+	
+	<footer>
+		<table spacing="-12" offsetx="10">
+			<col><![CDATA[<a href="pages.pdf" target="_blank"><img src="downloadicon.gif" /></a> ]]> </col>	
+			<col><![CDATA[<a href="pages.pdf" target="_blank"><footer>Download Print Version</footer></a> ]]> </col>
+		</table>
+	</footer>
+				
+</pages>

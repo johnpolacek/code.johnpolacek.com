@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<briefing>
+
+	<content>
+		<directory>content/</directory>
+	</content>
+	
+	<background>0x000000</background>
+	<frame>0x333333</frame>
+	<lines>0x333333</lines>
+
+	<header>
+		<height>30</height>
+		<background>0x000000</background>
+		<buttons x="0" y="0">
+			<spacing>20</spacing>
+			<font>GoodDog</font>
+			<size>21</size>
+			<color>0xFFFFFF</color>
+		</buttons>
+	</header>
+	
+	<footer>
+		<height>30</height>
+		<bug>johnpolacek_icon.png</bug>
+	</footer>
+	
+	<pages>
+		<buttons>0xCCCCCC</buttons>
+		<height>500</height>
+		<width>900</width>
+		<margin>30</margin>
+		<background>0xFFFFFF</background>
+	</pages>
+
+	<scrollbar>
+		<height>10</height>
+		<scrub>
+			<color>0xFFFFFF</color>
+			<alpha>.6</alpha>
+		</scrub>
+		<track>
+			<color>0x666666</color>
+			<alpha>.3</alpha>
+		</track>
+	</scrollbar>
+	
+	<fonts path="fonts/">
+		<font>GGSuperScript</font>
+		<font>GGSubScript</font>
+		<font>Andika</font>
+		<font>GoodDog</font>
+		<font>GentiumFamily</font>
+	</fonts>
+	
+	<preloader>
+		<font>Gentium</font>
+		<size>24</size>
+		<color>0xF58220</color>
+	</preloader>
+	
+	<lightbox>
+		<overlay>
+			<color>0x000000</color>
+			<alpha>.9</alpha>
+		</overlay>
+		<background>
+			<color>0xFFFFFF</color>
+			<dropshadow>.5</dropshadow>
+		</background>
+		<buttons>
+			<color>0xF58220</color>
+		</buttons>
+		<text>
+			<title>
+				<font>GoodDog</font>
+				<size>16</size>
+				<color>0x333333</color>
+			</title>
+			<subtitle>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0x111111</color>
+			</subtitle>
+			<note>
+				<font>Gentium</font>
+				<style>italic</style>
+				<size>12</size>
+				<color>0x111111</color>
+			</note>
+			<nav>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0xFFFFFF</color>
+			</nav>
+			<audiotitle>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0xFFFFFF</color>
+			</audiotitle>
+			<audiosubtitle>
+				<font>Gentium</font>
+				<size>12</size>
+				<color>0x999999</color>
+			</audiosubtitle>
+		</text>
+	</lightbox>
+		
+</briefing>

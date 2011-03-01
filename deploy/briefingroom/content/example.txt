@@ -1,0 +1,1 @@
+{url:image.jpg;title:Title of Media;subtitle:An optional subtitle;note:A note can be entered here}

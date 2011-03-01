@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE set PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<book>
+
+	<title>Reading Room Demo</title>
+	
+	<preface>
+		<section label="masthead">
+			<para>
+				<![CDATA[<masthead><img src="masthead.png" /> &nbsp; </masthead>]]> 
+			</para>
+		</section>
+		
+		<section label="footer">
+			<table spacing="-15">
+				<col><![CDATA[<a href='http://twitter.com/johnpolacek' target='blank'><img src="icon_twitter.png" /></a> ]]> </col>
+				<col><![CDATA[<a href='http://johnpolacek.deviantart.com' target='blank'><img src="icon_deviant.png" /></a> ]]> </col>
+				<col><![CDATA[<a href='http://delicious.com/johnpolacek' target='blank'><img src="icon_delicious.png" /></a> ]]> </col>
+				<col><![CDATA[<a href='http://johnpolacek.com' target='blank'><img src="icon_jp.png" /></a> ]]> </col>
+			</table>
+			<para offsety="-12">
+				<![CDATA[<footer>Version: 2010 Apr 17</footer>]]>
+			</para>
+		</section>
+		
+		<sidebar>
+			<para>
+				<![CDATA[<caption>Optional sidebar goes here</caption>]]>
+			</para>
+		</sidebar>
+	</preface>
+	
+	<part>	
+		<partintro>
+			<title>INTRO</title>
+			<para>
+				<![CDATA[&nbsp;]]>
+			</para>
+			<para>
+				<![CDATA[
+				
+				An optional intro can be placed as the uppermost section. It is here that you may wish to write some opening remarks. The intro is not linked to the menu navigation buttons to the left. If no intro is desired, the first section of content will be at the top instead.
+				
+				]]>
+			</para>
+		</partintro>
+	
+		<article>
+			<title>OVERVIEW</title>
+			<para>
+				<![CDATA[
+				
+				<h1>Overview</h1>
+				
+				The ReadingRoom template is designed to be used for a variety of communications such as newsletters, rfi submissions and white papers.
+				
+				Links:
+				<a href="http://code.johnpolacek.com" target="_blank">Code Library</a> 
+				<a href="http://code.google.com/p/contentdisplay/downloads/list" target="_blank">Source and Demos</a>
+				<a href="http://code.johnpolacek.com/docs/html" target="_blank">Documentation</a> 
+				
+				]]>
+			</para>
+		</article>
+	
+		<article>
+			<title>USAGE</title>
+			<para>
+				<![CDATA[
+				
+				<h1>Usage</h1>
+				
+				Use the markup in content.xml as a guide for how to compose the content (i.e. tagging syntax, layout examples). Refer to formatting.xml file as a guide for styling/skinning.
+				
+				<h2>Text Styling</h2>
+				Text can be styled in various ways. Here is <b>bold text</b>, <i>italicized text</i> and <b><i>bold italic</i></b> text (note: you must be using a font family that has bold and italic glyphs). Text can be <u>underlined</u>. Here is a <a href="http://johnpolacek.com" target="_blank">link to a website</a>. Superscript<sup>1</sup> and subscript<sub>2</sub> are available. You may also use non-english characters like ñ and ü, and symbols like ™, ® and €.
+				
+				Here is a code snippet:
+				<code>public static const FOO_BAR:String = "fooBar";</code>
+				
+				<h2>Layout Examples</h2>
+				Use rows to align content horizontally. For example, columns of text:
+				
+				]]>
+			</para>
+			<table spacing="20" offsety="-20">
+				<col>
+					<![CDATA[
+					
+					<h3>Name</h3>
+					John Doe
+					Sally Smith
+					
+					]]>
+				</col>
+				<col>
+					<![CDATA[
+					
+					<h3>Title</h3>
+					Managing Director
+					Vice President
+					
+					]]>
+				</col>
+				<col>
+					<![CDATA[
+					
+					<h3>Department</h3>
+					Creative
+					Accounts
+					
+					]]>
+				</col>
+			</table>
+			<para>
+				<![CDATA[A divider line may be inserted to divide content. ]]>
+			</para>
+			
+			<hr />
+			
+			<para>
+				<![CDATA[
+				
+				<h2>Types of content</h2>
+				<img src="thumb.jpg" />Here is an example of a text field containing an inline image. A text field may contain only one inline image that gets aligned in the upper right corner of the text field. Clicking on the image can link to a different site or to lightboxed content (see Lightboxing info below).
+				
+				Examples of media content:
+				
+				<i>An image (jpg, gif or png)</i> 
+				
+				]]>
+			</para>
+			<para>
+				<![CDATA[<a href="http://johnpolacek.com" target="_blank"><img src="image.jpg" /></a> ]]> 
+			</para>
+			<para>
+				<![CDATA[<caption>A caption can go here.</caption>]]>
+			</para>
+			<para>
+				<![CDATA[<i>Video (flv or h264)</i>]]>
+			</para>
+			<mediaobject>video.flv</mediaobject>
+			<para>
+				<![CDATA[<i>Flash (swf)</i>]]>
+			</para>
+			<mediaobject>flash.swf</mediaobject>
+			<para>
+				<![CDATA[<i>Audio (mp3)</i>]]>
+			</para>
+			<mediaobject>ocean.mp3</mediaobject>
+			<para>
+				<![CDATA[
+				
+				<h2>Lightboxing</h2>
+				
+				Media content can also displayed via a lightbox. Click the links below to view examples of the various types of media: 
+				
+				<a href='event:lightbox{url:image.jpg}'>A single image</a> <caption>(.jpg .gif .png)</caption>
+				
+				<a href='event:lightbox{url:image.jpg;subtitle:Image with hyperlink;link:http://johnpolacek.com;linkText:Click to visit}'>A single image with a hyperlink</a> <caption>(opens in a new window)</caption>
+				
+				<a href='event:lightbox{url:slide1.jpg,slide2.jpg,slide3.jpg;subtitle:Images automatically play through in a loop.}'>A slideshow of images</a> <caption>(.jpg .gif .png)</caption>
+				
+				<a href='event:lightbox{url:video.flv}'>A video</a> <caption>(.flv or h264 quicktime)</caption>
+				
+				<a href='event:lightbox{url:jungle.mp3;audioTitle:Jungle;audioSubtitle:Public Domain sound fx from simplythebest.net}'>An audio file</a> <caption>(.mp3 only)</caption>
+				
+				<a href='event:lightbox{url:jungle.mp3,ocean.mp3,thunder.mp3;title:Multiple Audio Track Example;audioTitle:Jungle;audioSubtitle:Public Domain sound fx from simplythebest.net;audioTitle:Ocean;audioSubtitle:Public Domain sound fx from simplythebest.net;audioTitle:Thunder;audioSubtitle:Public Domain sound fx from simplythebest.net}'>A group of audio files</a> <caption>(.mp3 only)</caption>
+				
+				<a href='event:lightbox{url:flash.swf}'>Flash content</a> <caption>(.swf)</caption>
+				
+				<a href='event:lightbox{url:image.jpg;title:Sample Case Study;subtitle:Image;note:A note can be entered here},lightbox{url:video.flv;title:Sample Case Study;subtitle:Video},lightbox{url:flash.swf;title:Sample Case Study}'>A collection of content grouped into a series</a>. <caption>As in a case study, for example.</caption>
+				
+				Lightbox content can be linked to with text, as the links above. Also lightbox content can be linked to via images. For example, in this row of images: 
+				
+				]]>
+			</para>
+			<table spacing="2">
+				<col><![CDATA[<a href='event:lightbox{url:image.jpg}'><img src="thumb.jpg" /></a> ]]> </col>
+				<col><![CDATA[<a href='event:lightbox{url:image.jpg}'><img src="thumb.jpg" /></a> ]]> </col>
+				<col><![CDATA[<a href='event:lightbox{url:image.jpg}'><img src="thumb.jpg" /></a> ]]> </col>
+				<col><![CDATA[<a href='event:lightbox{url:image.jpg}'><img src="thumb.jpg" /></a> ]]> </col>
+			</table>
+		</article>
+		
+		<article>
+			<title>CUSTOMIZATION</title>
+			<para>
+				<![CDATA[
+				
+				<h1>Customization</h1>
+				
+				<h2>Styling</h2>
+				ReadingRooms are styled by the formatting.xml file. There are many styling options available:
+				
+				Background <desc>(an image or a color)</desc>
+				Scrollbar <desc>(track/scrub color & transparency)</desc>
+				Fonts <desc>(use provided fonts or embed custom)</desc>
+				Nav Menu <desc>(background size/color, text styles, masthead, footer)</desc>
+				Lightbox <desc>(overlay color/transparency, background color, button color, text styles)</desc>
+				Content <desc>(background color/transparency/noise/size, text styles)</desc>
+				
+				<h2>Fonts</h2>
+				Use your own by placing swf files with embedded fonts in the fonts folder and adding them to the fonts listed in the formatting.xml doc. The fonts used in this demo and provided in the source download are licensed for free commercial usage and embedding (licenses included in the download).
+				
+				<h2>Tracking</h2>
+				Google Analytics event tracking is built in. Simply add a tracking code to the site.xml file and event tracking will be enabled. Site load complete, section views, lightbox content views are tracked. 
+				
+				]]>
+			</para>
+		</article>
+	</part>
+</book>

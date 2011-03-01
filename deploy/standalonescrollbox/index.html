@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Standalone Scrollbox Demo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<style type="text/css" media="screen">
+			html, body, #container	{ 
+				height:590;
+				width:300; 
+			}
+			body						
+			{
+				margin:0;
+				padding:20px;
+				background-color: #FFFFFF;
+				text-align: center;
+				color: #666666;
+			}
+			a:link {
+				color: #666666;
+			}
+			a:hover {
+				color: #CCCCCC;
+			}
+			a:visited {
+				color: #666666;
+			}
+			a:active {
+				color: #666666;
+			}
+			
+        </style>	
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+		var flashvars = {};
+		var params = {};
+		params.bgcolor = "0xFFF";
+		params.wmode = "window";
+		params.align = "center";
+		params.scale = "noscale";
+		var attributes = {};
+		attributes.id = "myId";
+		swfobject.embedSWF("scrollbox.swf", "myFlashContent", "590", "300", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+		</script>
+
+	</head>
+	<body>
+		<div id="myContent">
+			<div id="myFlashContent">
+				<h1>&nbsp;</h1>
+		  		<p align="center">This is a demo of a standalone Scrollbox component. Flash Player 9 required.</span><br />
+				<br />
+			    <br />
+			 	<a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+		  	</div>
+		</div>
+		
+		<p>
+			<a href="ScrollboxComponent.zip">Download ScrollboxComponent.zip [23k}</a>
+		</p>
+		
+		<p>
+			<a href="http://code.johnpolacek.com">Back to code.johnpolacek.com</a>
+		</p>
+       
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-2821890-3");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</body>
+</html>

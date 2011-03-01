@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE set PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<section>
+	<table spacing="20">
+		<col>
+			<para>
+				<![CDATA[
+					<a href='event:lightbox{set:links.txt,url:image.jpg}'><img src="thm.jpg" /></a>
+				]]>
+			</para>
+			<para>
+				<![CDATA[
+					<title>An Image</title>
+					<subtitle>Subtitle Goes Here</subtitle>
+					<note>A note can go here</note>
+				]]>
+			</para>
+		</col>
+		<col>
+			<para>
+				<![CDATA[
+				<a href='event:lightbox{set:links.txt,url:slide1.jpg,slide2.jpg,slide3.jpg}'><img src="thm.jpg" /></a>
+				]]>
+			</para>
+			<para>
+				<![CDATA[
+				<title>A Series of Images </title>
+				<note>Auto-plays in a loop</note>
+				]]> 
+			</para>	
+		</col>
+		<col>
+			<para>
+				<![CDATA[
+				<a href='event:lightbox{set:links.txt,url:video.flv}'><img src="thm.jpg" /></a> 
+				]]>
+			</para>
+			<para>
+				<![CDATA[
+				<title>Video</title>
+				<note>Can be flv or h.264</note>
+				]]> 
+			</para>	 
+		</col>
+		<col>
+			<para>
+				<![CDATA[
+				<a href='event:lightbox{set:links.txt,url:flash.swf}'><img src="thm.jpg" /></a>
+				]]>
+			</para>
+			<para>
+				<![CDATA[
+				<title>A Flash File</title>
+				]]> 
+			</para>
+		</col>
+	</table>
+	<para>
+		<![CDATA[
+		<backtomenu>&lt;&lt; <a href='event:viewingroom{xml/room1.xml}'>back to main menu</a></backtomenu>
+		]]>
+	</para>
+</section>

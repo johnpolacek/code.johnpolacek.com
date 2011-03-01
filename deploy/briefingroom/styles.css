@@ -1,0 +1,37 @@
+body {
+	font-family:Gentium;
+	font-size:14;
+	color:#FFFFFF;
+	leading:4;	
+}
+
+u {
+	text-decoration:underline;
+}
+
+footer {
+	font-family:Gentium;
+	font-size:10;
+	color:#666666;
+	
+}
+
+.title {
+	font-family:GoodDog;
+	font-size:21;
+	color:#FFFFFF;
+}
+
+.subtitle {
+	font-family:GoodDog;
+	font-size:21;
+	color:#999999;
+}
+
+sup {
+	font-family:GGSuperScript;
+}
+
+sub {
+	font-family:GGSubScript;
+}

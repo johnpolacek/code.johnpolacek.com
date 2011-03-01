@@ -1,0 +1,87 @@
+body {
+	font-family:Gentium;
+	font-size:16;
+	color:#000000;
+	leading:4;	
+}
+
+h1 {
+	font-family:GoodDog;
+	font-size:50;
+	color:#333333;
+}
+
+h2 {
+	font-family:GoodDog;
+	font-size:25;
+	color:#333333;
+}
+
+h3 {
+	font-family:Gentium;
+	font-weight:bold;
+	font-size:16;
+	color:#000000;
+}
+
+a {
+	font-family:Gentium;
+	font-weight:bold;
+	font-style:italic;
+	font-size:16;
+	color:#222222;
+	text-decoration:underline;
+}
+
+u {
+	text-decoration:underline;
+}
+
+byline {
+	font-family:Gentium;
+	font-weight:bold;
+	font-style:italic;
+	font-size:16;
+	color:#111111;
+}
+
+desc {
+	font-family:Gentium;
+	font-style:italic;
+	font-size:14;
+	color:#000000;
+}
+
+caption {
+	font-family:Gentium;
+	font-style:italic;
+	font-size:14;
+	color:#444444;
+}
+
+code {
+	font-family:Andika;
+	font-size:14;
+	color:#000000;
+}
+
+masthead {
+	margin-left:10;
+}
+
+footer {
+	font-family:Gentium;
+	font-weight:bold;
+	font-style:italic;
+	font-size:12;
+	color:#000000;
+	margin-left:8;
+}
+
+sup {
+	font-family:GGSuperScript;
+}
+
+sub {
+	font-family:GGSubScript;
+}

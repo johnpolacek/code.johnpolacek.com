@@ -1,0 +1,1 @@
+{url:jungle.mp3,ocean.mp3,thunder.mp3;title:Multiple Audio Track Example;audioTitle:Jungle;audioSubtitle:Public Domain sound fx from simplythebest.net;audioTitle:Ocean;audioSubtitle:Public Domain sound fx from simplythebest.net;audioTitle:Thunder;audioSubtitle:Public Domain sound fx from simplythebest.net}

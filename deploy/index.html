@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>johnpolacek | Code Library | ContentDisplay Suite</title>
+<style type="text/css">
+<!--
+body { 
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	margin: 20px 30px 0;
+	color: #444;
+}
+div.header {
+	
+}
+div.footer {
+	padding: 24px 0;
+}
+div.footer p {
+	color: #AAA;
+	font-size: 10px;
+}
+div.toc {
+	padding-top:18px;
+}
+div.toc a {
+	color:#666;
+}
+div.group {
+	padding-top:18px;
+}
+div.downloads {
+	padding-top:18px;
+}
+a {
+	color: #888;
+	font-style:italic;
+}
+a:hover {
+	color: #777;
+}
+small {
+	color: #888;
+}
+div.downloads
+{
+	padding-bottom: 10px;
+}
+div.downloads p
+{
+	font-size:16px;
+	padding: 6px 0;
+}
+div.downloads a {
+	padding: 6px 14px;
+	color: #fff;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #AAA;
+	border-radius: 14px;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	background: #888;
+	background: -webkit-gradient(linear, left top, left bottom,  from(#BBB), to(#888));
+	background: -moz-linear-gradient(-90deg, #BBB, #888);
+}
+div.downloads a:hover {
+	opacity:.9;
+}
+h1  {
+	color: #666;
+	margin-top: 10px;
+	font-size:24px;
+}
+h2 {
+	padding-top:12px;
+	color: #999;
+	font-size:14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+h3 {
+	padding-top:12px;
+	color: #666;
+	font-size:18px;
+}
+h4 {
+	margin-top:-10px;
+	font-weight:bold;
+	font-size:14px;
+}
+h5 {
+	margin: -15px 0 15px;
+	color: #666;
+	font-size:14px;
+	line-height:150%;
+}
+p {
+	margin-top: -6px;
+	margin-right: 20%;
+	font-size:14px;
+}
+p.desc {
+	font-size:12px;
+	font-style:italic;
+	color: #999;
+}
+p.note {
+	margin-top: 6px;
+	font-size:12px;
+	line-height:100%;
+	color: #666;
+}
+ul {
+	padding: 0;
+	margin: 0; 
+}
+ul li {
+	font-size:14px;
+	list-style: none;
+	padding-bottom: 15px;
+}
+ul ul {
+	padding:6px 0 0 10px;
+}
+ul ul li {
+	font-size:12px;
+	list-style: none;
+	padding-bottom:4px;
+}
+ul ul ul {
+	padding:0 10px 10px 10px;
+}
+ul ul ul li {
+	font-size:10px;
+	list-style: none;
+	padding-bottom:3px;
+}
+td {
+	padding: 0 6px 10px;
+	font-size:12px;
+	line-height:100%;
+	color: #666;
+	vertical-align:top;
+	border:0;
+} 
+-->
+</style>
+<script src="swfobject.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="header">
+	  <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="330" height="60">
+		<param name="movie" value="graphics/codeheader.swf" />
+		<param name="quality" value="high" />
+		<param name="wmode" value="opaque" />
+		<param name="swfversion" value="9.0.45.0" />
+	   <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="graphics/codeheader.swf" width="330" height="60">
+		  <!--<![endif]-->
+		  <param name="quality" value="high" />
+		  <param name="wmode" value="opaque" />
+		  <param name="swfversion" value="9.0.45.0" />
+		 <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+		  <div>
+			<p><img src="graphics/codeheader.gif" width="330" height="60" /></p>
+		  </div>
+		  <!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	  </object>
+	</div>
+	
+	<div class="toc">
+		<p>Various ActionScript classes and Flash site templates that I use on a regular basis, collected them into one open source code library. Feel free to send any suggestions, questions, etc. to <a href="mailto:john@johnpolacek.com">john@johnpolacek.com</a></p>
+		<div class="downloads"
+			<p>
+				<a href="http://code.google.com/p/contentdisplay/downloads/list" target="_blank">Source Download Page</a>
+			</p>
+			<p>
+				<a href="https://code.google.com/p/contentdisplay/">Project Home on Google Code</a><br />
+			</p>
+			<p>
+				<a href="docs/html/index.html" target="_blank">Documentation</a><br />
+			</p>
+		</div>
+		<ul>
+			<li>
+				<a href="#ContentDisplaySuite">ContentDisplay Suite</a>
+				<ul>
+					<li>- <a href="#BriefingRoom">BriefingRoom</a></li>
+					<li>- <a href="#MediaRoom">MediaRoom</a></li>
+					<li>- <a href="#ReadingRoom">ReadingRoom</a></li>
+					<li>- <a href="#ViewingRoom">ViewingRoom</a></li>
+					<li>- <a href="#FullScreenSite">FullScreenSite</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#StandaloneVideoPlayer">Standalone Video Player</a>
+			</li>
+			<li>
+				<a href="#BasicWebkitPageTemplate">Basic Webkit Page Template</a>
+			</li>
+			<li>
+				<a href="#ClassLibraryDemos">Class Library Demos</a>
+				<ul>
+					<li>- <a href="#Components">Components</a></li>
+						<ul>
+							<li><a href="#GridGallery">GridGallery</a></li>
+							<li><a href="#ImageGrid">ImageGrid</a></li>
+							<li><a href="#Lightbox">Lightbox</a></li>
+						</ul>
+					<li>- <a href="#Display">Display</a></li>
+						<ul>
+							<li><a href="#AudioDisplay">AudioDisplay</a></li>
+							<li><a href="#AutoSlideShowDisplay">AutoSlideShowDisplay</a></li>
+							<li><a href="#FlashDisplay">FlashDisplay</a></li>
+							<li><a href="#ImageDisplay">ImageDisplay</a></li>
+							<li><a href="#VideoDisplay">VideoDisplay</a></li>
+						</ul>
+					<li>- <a href="#Media">Media</a></li>
+						<ul>
+							<li><a href="#SoundLoop">SoundLoop</a></li>
+							<li><a href="#SoundSpectrum">SoundSpectrum</a></li>
+						</ul>
+					<li>- <a href="#Shapes">Shapes</a></li>
+					<li>- <a href="#Text">Text</a></li>
+						<ul>
+							<li><a href="#HTMLTextBlock">HTMLTextBlock</a></li>
+						</ul>
+					<li>- <a href="#UI">UI</a></li>
+						<ul>
+							<li><a href="#Accordion">Accordion</a></li>
+							<li><a href="#ButtonsAndMenus">Buttons and Menus</a></li>
+							<li><a href="#Scrollbox">Scrollbox</a></li>
+							<li><a href="#StandaloneScrollbox">Standalone Scrollbox</a></li>
+						</ul>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="group" id="ContentDisplaySuite">
+		<hr size="1" color="#999"/>
+		<h1>ContentDisplay Suite</h1>
+		<p> A group of Flash site templates (“Rooms”) used to display various types of media content (video/audio/images) in a variety of ways with a library of shared components (Lightbox, Media Players, etc.).</p>
+		
+		<h3 id="BriefingRoom">BriefingRoom</h3> 
+		<h4><a href="briefingroom/index.php" target="_blank">View Demo</a></h4>
+		<p>Flash template for creating Flash presentations or microsites that imports external swf's that have been generated from InDesign. Lightbox functionality is enabled by adding Interactive Buttons in InDesign and adding the file names of the content to be lightboxed to the button title.</p>
+		
+		<h3 id="MediaRoom">MediaRoom</h3>
+		<h4><a href="mediaroom/index.html" target="_blank">View Demo</a></h4>
+		<p>Another xml-based full-screen Flash site template, with deeplinking and a liquid canvas, designed to display media content.</p>
+		
+		<h3 id="ReadingRoom">ReadingRoom</h3>
+		<h4><a href="readingroom/index.html" target="_blank">View Demo</a></h4>
+		<p>An xml-based full-screen Flash site template, designed for communications such as newsletters, business proposals, case studies, white papers, etc. Extends FullScreenSite.</p>
+		
+		<h3 id="ViewingRoom">ViewingRoom</h3>
+		<h4><a href="viewingroom/index.html" target="_blank">View Demo</a></h4>
+		<p>An xml-based full-screen Flash site template, designed to showcase media content, such as video, images, audio and flash.</p>
+		
+		<h3 id="FullScreenSite">FullScreenSite</h3>
+		<h4><a href="fullscreensite/index.html" target="_blank">View Demo</a></h4>
+		<p>An xml-based full-screen fixed two-column Flash site template. Includes swfaddress, lightboxing, various media components and google analytics event tracking.</p>
+	</div>
+	
+	<div class="group" id="StandaloneVideoPlayer">
+		<hr size="1" color="#999"/>
+		<h1>Standalone Video Player</h1>
+		<h4><a href="videoobject/examples.html" target="_blank">View Demo</a> | <a href="videoobject/VideoObject.zip" target="_blank">Download</a></h4>
+		<p>The setup I use to embed video on a web pages. Uses a Flash video player I created, and falls back to an html5 player for Apple devices.</p>
+	</div>
+	
+	<div class="group" id="BasicWebkitPageTemplate">
+		<hr size="1" color="#999"/>
+		<h1>Basic Webkit Page Template</h1>
+		<h4><a href="webkit/index.html" target="_blank">View Page</a> <small>(Best viewed in Chrome or Safari)</small> | <a href="webkit/webkit.zip" target="_blank">Download</a></h4>
+		<p>A basic html5 web page template designed for webkit devices (iPhone/iPad/Android). Includes landscape/portrait css and jQuery.</p>
+	</div>
+	
+	<div class="group" id="ClassLibraryDemos">
+		<hr size="1" color="#999"/>
+		<h1>Class Library Demos</h1>
+		<p>Usage examples for the various ActionScript classes in the johnpolacek lib.</p>
+		
+		<hr size="1" color="#DDD"/>
+		<h2 id="Components">Components</h2>
+		<p class="desc">Components used by document classes to present ContentDisplay elements.</p>
+		
+		<h3 id="GridGallery">GridGallery</h3>
+		<h4><a href="gridgallery/index.html" target="_blank">View Demo</a></h4>
+		<p>Loads an array of thumbnails and arranges them in a grid. Clicking on a thumbnail launches content from a corresponding array in a lightbox window.</p>
+		
+		<h3 id="ImageGrid">ImageGrid</h3>
+		<h4><a href="imagegrid/index.html" target="_blank">View Demo</a></h4>
+		<p>Loads and arranges images in a grid.</p>
+		
+		<h3 id="Lightbox">Lightbox</h3>
+		<h4><a href="lightbox/index.html" target="_blank">View Demo</a></h4>
+		<p>Uses the ContentDisplay classes to display media content in a window on the top level while using an overlay to dim the background.</p>
+		
+		<hr size="1" color="#DDD"/>
+		<h2 id="Display">Display</h2>
+		<p class="desc">Top-level display classes for various types of media.</p>
+		
+		<h3 id="AudioDisplay">AudioDisplay</h3>
+		<h4><a href="audiodisplay/index.html" target="_blank">View Demo</a></h4>
+		<p>An MP3 player.</p>
+		
+		<h3 id="AutoSlideShowDisplay">AutoSlideShowDisplay</h3>
+		<h4><a href="autoslideshowdisplay/index.html" target="_blank">View Demo</a></h4>
+		<p>A looping animated slideshow of images</p>
+		
+		<h3 id="FlashDisplay">FlashDisplay</h3>
+		<p>Displays flash content (.swf)</p>
+		
+		<h3 id="ImageDisplay">ImageDisplay</h3>
+		<p>Displays images (.jpg, .gif and .png)</p>
+		
+		<h3 id="VideoDisplay">VideoDisplay</h3>
+		<h4><a href="videodisplay/index.html" target="_blank">View Demo</a></h4>
+		<p>A netstream flash video player</p>
+		
+		<hr size="1" color="#DDD"/>
+		<h2 id="Media">Media</h2>
+		<p class="desc">Various classes dealing with different types of media.</p>
+		
+		<h3 id="SoundLoop">SoundLoop</h3>
+		<h4><a href="soundloop/index.html" target="_blank">View Demo</a></h4>
+		<p>Loads and plays sound files in a continuous loop.</p>
+		
+		<h3 id="SoundSpectrum">SoundSpectrum</h3>
+		<h4><a href="soundspectrum/index.html" target="_blank">View Demo</a></h4>
+		<p>Animated sound spectrum displayed in a rectangle container</p>
+		
+		<hr size="1" color="#DDD"/>
+		<h2 id="Shapes">Shapes</h2>
+		<p class="desc">Classes for quickly and easily creating shapes.</p>
+		<h3>RectangleShape, EllipseShape, etc.</h3>
+		<h4><a href="shapes/index.html" target="_blank">View Demo</a></h4>
+		
+		<hr size="1" color="#DDD"/>
+		<h2 id="Text">Text</h2>
+		<p class="desc">Classes are for displaying text.</p>
+		
+		<h3 id="HTMLTextBlock">HTMLTextBlock</h3>
+		<h4><a href="htmltextblock/index.html" target="_blank">View Demo</a></h4>
+		<p>Displays HTML-formatted text, with runtime font embedding & CSS styling</p>
+		
+		<hr size="1" color="#DDD"/>
+		<h2 id="UI">UI</h2>
+		<p class="desc">Classes for various user interface elements (e.g., navigation, scrolling).</p>
+		
+		<h3 id="AccordionMenu>AccordionMenu</h3>
+		<h4><a href="accordion/index.html" target="_blank">View Demo</a></h4>
+		<p>Simple accordion nav menu.</p>
+		
+		<h3 id="ButtonsAndMenus">Buttons and Menus</h3>
+		<h4><a href="buttonsandmenus/index.html" target="_blank">View Demo</a></h4>
+		<p>Using ChromeContainer, BasicButton and BasicButtonMenu.</p>
+		
+		<h3 id="Scrollbox>Scrollbox</h3>
+		<h4><a href="scrollbox/index.html" target="_blank">View Demo</a></h4>
+		<p>Add a scrollbar and masking to any sprite.</p>
+		
+		<h3 id="StandaloneScrollbox">Standalone Scrollbox</h3>
+		<h4><a href="standalonescrollbox/index.html" target="_blank">View Demo</a> | <a href="standalonescrollbox/ScrollboxComponent.zip">Download</a></h4>
+		<p>This scrollbox component is independent of the rest of the class library. It uses no imported classes, can be easily re-skinned and is meant to be edited in the .fla.</p>
+	</div>
+	
+	<div class="footer">
+		<p>Greensock Tweening Platform source code subject to the terms of use as described <a href="http://www.greensock.com/terms_of_use.html" target="_blank">greensock.com</a>. SWFAddress is (c) 2006-2009 Rostislav Hristov and contributors, and is released under the <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>. Other original source code provided under the <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">standard MIT license</a>.</p>
+		<p>Copyright &#169; 2010 John Polacek, <a href="http://johnpolacek.com" target="_blank">johnpolacek.com</a></p>
+	</div>
+	
+	<script type="text/javascript">
+		<!--
+		swfobject.registerObject("FlashID");
+		//-->
+	</script>
+	  
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	
+	<script type="text/javascript">
+		try{
+			var pageTracker = _gat._getTracker("UA-2821890-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+
+</body>
+
+</html>

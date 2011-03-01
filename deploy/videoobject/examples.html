@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>code.johnpolacek.com | VideoObject</title>
+<link rel="icon" href="favicon.ico" />
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript">
+	var flashvars = {video:"video/placeholder640x360.mp4"};
+	var params = {};
+	var attributes = {};
+	attributes.id = "VideoObject1";
+	swfobject.embedSWF("swf/vidobject.swf", "altContent1", "640", "360", "9.0.0", false, flashvars, params, attributes);
+</script>
+<script type="text/javascript">
+	var flashvars = {
+		video:"video/placeholder640x480.mp4",
+		tracking:"true",
+		buttonColor:"#F58220",
+		backgroundColor:"#111111"
+	};
+	var params = {};
+	var attributes = {};
+	attributes.id = "VideoObject2";
+	swfobject.embedSWF("swf/vidobject.swf", "altContent2", "640", "480", "9.0.0", false, flashvars, params, attributes);
+</script>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try
+	{
+		var pageTracker = _gat._getTracker("UA-16127981-1");
+		pageTracker._trackPageview();
+	} 
+	catch(err) {}
+</script>
+<style type="text/css">
+<!--
+body 
+{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-align:center;
+	background-image:url('images/backgroundslice100.gif');
+	background-repeat:repeat-x;
+	background-color:#000;
+}
+a
+{
+	font-style: italic;
+	color: #444;
+}
+a:hover
+{
+	color: #666;
+}
+a:focus, object:focus 
+{ 
+	outline: none; 
+	-moz-outline-style: none; 
+} 
+img
+{  
+	border-style: none;
+	display: block;
+}
+h1
+{  
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFF;
+}
+h2
+{  
+	font-size: 14px;
+	font-style:italic;
+	font-weight: bold;
+	color: #FFF;
+	margin-bottom: -10px;
+}
+p
+{  
+	font-size: 14px;
+	color: #999;
+}
+hr
+{
+	border:0;
+	border-top: 1px solid #333;
+	height: 0;
+	background: #333;
+}
+code
+{
+	font-family: Menlo, Monaco, Consolas, monospace;
+	font-size: 12px;
+}
+#wrapper 
+{
+	position: relative;
+	width: 640px;
+	text-align: left;
+	top:20px;
+	margin: 0 auto ;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#content
+{
+	position: absolute;
+	top: 80px;
+}
+#download
+{
+	font-size: 14px;
+	color: #333;
+	padding-top: -10px;
+	padding-bottom: 30px;
+}
+
+-->
+</style>
+<meta name="viewport" content="width=720" />
+</head>
+<body>
+<div id="wrapper">
+
+	<div>
+	  <a href="http://code.johnpolacek.com"><img src="images/code_johnpolacek_com.png" width="307" height="52" alt="code.johnpolacek.com" /></a>
+	</div>
+    
+	<div id="content">
+       <h1>Online Video</h1>
+       <p>Currently, the best way to embed video on a webpage that will work across most browsers and devices is to use a combination of flash and html5. Embed a flash-based player with swfobject, and present html5 video as the alternate content. VideoObject (vidobject.swf) is a flash player that I’ve created that is open source and available for free commercial and non-commercial use.</p>
+       <div id="download">
+   	   <a href="VideoObject.zip">Download VideoObject.zip</a>
+       </div>
+       <hr/>
+       <h2>Video Format</h2>
+       <p>There are cross-browser non-flash video embedding methods out there, but they require you to create and serve multiple encoded versions of your video. This method enables you to deliver video in a single fomat (baseline h.264 mp4). Follow <a href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariWebContent/CreatingVideoforSafarioniPhone/CreatingVideoforSafarioniPhone.html" target="_blank">Apple’s specs</a> for Mobile Safari compatibility. This format will also work for flash, so creating multiple formats is not necessary.</p>
+       <h2>Poster Image</h2>
+       <p>To create a poster image for the video, make it the first frame. <i>(The poster attribute for the html5 video tag isn't supported by Apple until at least iPhone SDK 4.0)</i></p>
+       <h2>Basic VideoObject Embedding</h2>
+       <p>A VideoObject embed with no custom parameters set:</p>
+       <div id="altContent1">
+    		<video width="640" height="360" controls>
+    			<source src="video/placeholder640x360.mp4"  type="video/mp4"  />
+    		</video>
+     	</div> 
+		<div id="download">
+			Download Video: <a href="video/placeholder640x360.mp4">mp4</a>
+		</div>
+       <h2>Embedding Options</h2>
+       <p><b><i>Video Size</i></b> - To embed videos of different sizes, simply set the correct width/height values on the object and video embed tags.</p>
+       <p><b><i>Player Color</i></b> - To change the colors of the flash player chrome, set FlashVars backgroundColor and buttonColor values.</p>
+       <p><b><i>Google Analytics Tracking</i></b> - Add google analytics tracking by setting the FlashVars tracking parameter to true, and adding some javascript at the bottom of the html document. View this page’s source to see how this is done on the example below). <i>Note: use the standard method of installing analytics on an html page via a javascript code snippet placed at the bottom of the page.</i></p>
+        <div id="altContent2">
+    		<video width="640" height="480" controls>
+    			<source src="video/placeholder640x480.mp4"  type="video/mp4"  />
+    		</video>
+     	</div>      
+		<div id="download">
+			Download Video: <a href="video/placeholder640x480.mp4">mp4</a>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+    swfobject.registerObject("VideoObject1");
+    swfobject.registerObject("VideoObject2");
+</script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try{
+        var pageTracker = _gat._getTracker("UA-2821890-4");
+        pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+</body>
+</html>

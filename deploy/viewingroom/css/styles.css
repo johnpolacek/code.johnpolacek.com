@@ -1,0 +1,98 @@
+body {
+	font-family:Gentium;
+	font-size:16;
+	color:#999999;
+	leading:4;	
+}
+
+h1 {
+	font-family:GoodDog;
+	font-size:36;
+	color:#666666;
+}
+
+title {
+	font-family:GoodDog;
+	font-size:20;
+	color:#CCCCCC;
+}
+
+subtitle {
+	font-family:Gentium;
+	font-size:14;
+	color:#CCCCCC;
+	leading: 0;
+}
+
+note {
+	font-family:Gentium;
+	font-style:italic;
+	font-size:12;
+	color:#999999;
+}
+
+backtomenu {
+	font-family:GoodDog;
+	font-size:24;
+	color:#666666;
+}
+
+a {
+	text-decoration:underline;
+}
+
+u {
+	text-decoration:underline;
+}
+
+header {
+	font-family:Gentium;
+	font-size:16;
+	color:#111111;
+	leading:-5;
+}
+
+desc {
+	font-family:Gentium;
+	font-style:italic;
+	font-size:14;
+	color:#000000;
+}
+
+caption {
+	font-family:Gentium;
+	font-style:italic;
+	font-size:14;
+	color:#444444;
+}
+
+code {
+	font-family:Andika;
+	font-size:14;
+	color:#000000;
+}
+
+masthead {
+	font-family:GoodDog;
+	font-size:30;
+	color:#333333;
+	margin-left:5;
+	leading:10;
+}
+
+footer {
+	font-family:Gentium;
+	font-weight:bold;
+	font-style:italic;
+	font-size:12;
+	color:#000000;
+	margin-left:8;
+}
+
+sup {
+	font-family:GGSuperScript;
+}
+
+sub {
+	font-family:GGSubScript;
+}

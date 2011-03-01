@@ -1,0 +1,45 @@
+nav {
+	font-family:GoodDog;
+	font-size:24;
+	color:#FFFFFF;
+}
+
+subnav {
+	font-family:GoodDog;
+	font-size:18;
+	color:#FFFFFF;
+}
+
+subnav-bullet {
+	color:#F58220;
+}
+
+footer {
+	font-family:Gentium;
+	font-size:12;
+	color:#333333;
+}
+
+footer-bullet {
+	font-family:Gentium;
+	font-weight:bold;
+	font-size:14;
+	color:#F58220;
+}
+
+a {
+	font-family:Gentium;
+	text-decoration:underline;
+}
+
+u {
+	text-decoration:underline;
+}
+
+sup {
+	font-family:GGSuperScript;
+}
+
+sub {
+	font-family:GGSubScript;
+}

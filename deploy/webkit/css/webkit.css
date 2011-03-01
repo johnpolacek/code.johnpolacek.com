@@ -1,0 +1,133 @@
+/* Base styles ------------------------------------------------------------- */
+
+html, body	{ 
+	height:100%; 
+}
+
+body { 
+	margin:0;
+	padding:0;
+	text-align: center;
+	overflow:hidden;
+	font:13px sans-serif; 
+	*font-size:small; 
+	*font:x-small; 
+	color: #444;
+	line-height:1.22;
+	"Trebuchet MS", Tahoma, Arial, sans-serif;
+}
+
+#outer-wrap {
+	display: table; 
+	height: 100%;  
+	overflow: hidden;
+	margin:0 auto;
+}
+#middle-wrap {
+	display: table-cell; 
+	vertical-align: middle;
+	width:960px;
+}
+#inner-wrap {
+
+}
+
+
+/* Header Styles */
+header { 
+	text-align: center;
+}
+
+/* Navigation Styles */
+nav { 
+
+}
+nav ul {
+	text-align: center;
+	position:relative;
+	float:left;
+	left:50%;
+	margin:0;
+	padding:0;
+	list-style:none;
+	position:relative;
+}
+nav li {
+	float: left;
+	display: block;
+	padding: 6px;
+	position:relative; 
+    right:50%;
+    text-transform: uppercase;
+}
+nav li a {
+	text-decoration: none;
+	padding: 6px 12px;
+	margin: 0;
+	color: #666;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDD;
+	border-radius: 9px;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	background: #EEE;
+	background: -webkit-gradient(linear, left top, left bottom,  from(#FFF), to(#DDD));
+	background: -moz-linear-gradient(-90deg, #FFF, #DDD);
+}
+
+/* Section Styles */
+section { 
+	display: block;
+	width: 640px;
+	text-align: left;
+	padding-top: 20px;
+	margin: 0 auto;
+	clear: both;
+	position: relative;
+}
+
+/* Footer Styles */
+footer { 
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+}
+
+/* Text Styles */
+p, li { 
+	font-size: 15px;
+}
+a { 
+	color:#000;
+}
+h1 { 
+	font-size: 36px;
+}
+h2 { 
+  
+}
+nav li {
+	font-size: 12px;
+}
+small {
+	font-size: 9px;
+}
+
+
+/* Styles for landscape ---------------------------------------------------- */
+
+@media all and (orientation:landscape) { 
+	h1#portrait { 
+		display:none;
+	}
+}
+
+
+/* Styles for portrait ----------------------------------------------------- */
+@media all and (orientation:portrait) { 
+	h1#landscape { 
+		display:none;
+	}
+}

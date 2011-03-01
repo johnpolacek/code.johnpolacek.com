@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+	<tracking>
+		<code>UA-2821890-5</code>
+	</tracking>
+
+	<background>background.jpg</background>
+
+	<margin>20</margin>
+	
+	<scrollbar>
+		<scrub>
+			<color>0xFFFFFF</color>
+			<alpha>.6</alpha>
+		</scrub>
+		<track>
+			<color>0x000000</color>
+			<alpha>.3</alpha>
+		</track>
+	</scrollbar>
+	
+	<fonts path="fonts/">
+		<font>GGSuperScript</font>
+		<font>GGSubScript</font>
+		<font>Andika</font>
+		<font>GoodDog</font>
+		<font>GentiumFamily</font>
+	</fonts>
+		
+	<header>
+		<width>248</width>
+		<height>480</height>
+		<margin>
+			<top>10</top>
+		</margin>
+		<spacing>20</spacing>
+		<background>
+			<color>0x444444</color>
+			<noise>1</noise>
+			<alpha>.8</alpha>
+		</background>
+	</header>
+	
+	<nav x="8" y="-7">
+		<align>left</align>
+		<spacing>0</spacing>	
+		<buttons>
+			<font>GoodDog</font>
+			<size>21</size>
+			<color>0xFFFFFF</color>
+			<width>248</width>
+			<lines>
+				<spacing>-2</spacing>
+				<adjusty>-3</adjusty>
+				<color>0x000000</color>
+				<alpha>.2</alpha>
+			</lines>
+		</buttons>
+	</nav>
+	
+	<sidebar>
+		<width>90</width>
+		<margin>10</margin>
+		<background>
+			<color>0xFFFFFF</color>
+			<noise>0</noise>
+			<alpha>.5</alpha>
+		</background>
+	</sidebar>
+	
+	<footer>
+		<width>248</width>
+		<margin>0</margin>
+		<spacing>10</spacing>
+		<background>
+			<color>0xFFFFFF</color>
+			<noise>0</noise>
+			<alpha>0</alpha>
+		</background>
+	</footer>
+	
+	<lightbox>
+		<overlay>
+			<color>0x000000</color>
+			<alpha>.9</alpha>
+		</overlay>
+		<background>
+			<color>0xFFFFFF</color>
+			<dropshadow>.5</dropshadow>
+		</background>
+		<buttons>
+			<color>0xF58220</color>
+		</buttons>
+		<text>
+			<title>
+				<font>GoodDog</font>
+				<size>16</size>
+				<color>0x333333</color>
+			</title>
+			<subtitle>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0x111111</color>
+			</subtitle>
+			<note>
+				<font>Gentium</font>
+				<style>italic</style>
+				<size>12</size>
+				<color>0x111111</color>
+			</note>
+			<nav>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0x999999</color>
+			</nav>
+			<link>
+				<font>Gentium</font>
+				<style>italic</style>
+				<size>12</size>
+				<color>0x000000</color>
+			</link>
+			<audiotitle>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0xFFFFFF</color>
+			</audiotitle>
+			<audiosubtitle>
+				<font>Gentium</font>
+				<size>12</size>
+				<color>0x999999</color>
+			</audiosubtitle>
+		</text>
+	</lightbox>
+	
+	<content path="content/">
+		<width>552</width>
+		<height>480</height>
+		<margin>20</margin>
+		<spacing>0</spacing>
+		<background>
+			<color>0xFFFFFF</color>
+			<noise>.75</noise>
+			<alpha>.9</alpha>
+		</background>
+		<linecolor>0xCCCCCC</linecolor>
+	</content>	
+</site>

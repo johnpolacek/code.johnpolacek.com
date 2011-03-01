@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<title>ViewingRoom Demo</title>
+	
+	<tracking>
+		<code>UA-2821890-5</code>
+	</tracking>
+	
+	<fullscreen x="810" y="10">fullscreenbutton.gif</fullscreen>
+	
+	<xml>xml/room1.xml</xml>
+
+	<background>0x111111</background>
+
+	<margin>0</margin>
+	
+	<scrollbar>
+		<scrub>
+			<color>0x999999</color>
+			<alpha>1</alpha>
+		</scrub>
+		<track>
+			<color>0x333333</color>
+			<alpha>1</alpha>
+		</track>
+	</scrollbar>
+	
+	<fonts path="fonts/">
+		<font>GGSuperScript</font>
+		<font>GGSubScript</font>
+		<font>Andika</font>
+		<font>GoodDog</font>
+		<font>GentiumFamily</font>
+	</fonts>
+		
+	<header>
+		<width>860</width>
+		<margin>
+			<top>0</top>
+			<bottom>10</bottom>
+			<left>10</left>
+		</margin>
+		<spacing>10</spacing>
+		<background>
+			<color>0xFFFFFF</color>
+			<alpha>1</alpha>
+			<noise>0</noise>
+		</background>
+	</header>
+	
+	<lightbox>
+		<overlay>
+			<color>0x000000</color>
+			<alpha>.9</alpha>
+		</overlay>
+		<background>
+			<color>0xFFFFFF</color>
+			<dropshadow>.5</dropshadow>
+		</background>
+		<buttons>
+			<color>0x333333</color>
+		</buttons>
+		<text>
+			<title>
+				<font>GoodDog</font>
+				<size>24</size>
+				<color>0x666666</color>
+			</title>
+			<subtitle>
+				<font>Gentium</font>
+				<size>14</size>
+				<color>0x111111</color>
+			</subtitle>
+			<note>
+				<font>Gentium</font>
+				<style>italic</style>
+				<size>12</size>
+				<color>0x111111</color>
+			</note>
+			<audiotitle>
+				<font>GoodDog</font>
+				<size>20</size>
+				<color>0xFFFFFF</color>
+			</audiotitle>
+			<audiosubtitle>
+				<font>Gentium</font>
+				<size>12</size>
+				<color>0x999999</color>
+			</audiosubtitle>
+		</text>
+	</lightbox>
+	
+	<content path="content/">
+		<width>860</width>
+		<height>0</height>
+		<margin>
+			<left>20</left>
+			<right>20</right>
+			<bottom>40</bottom>
+		</margin>
+		<spacing>25</spacing>
+		<background>
+			<color>0x000000</color>
+			<noise>0</noise>
+			<alpha>1</alpha>
+		</background>
+		<linecolor>0xCCCCCC</linecolor>
+	</content>
+
+</site>

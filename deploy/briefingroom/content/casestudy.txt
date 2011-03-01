@@ -1,0 +1,1 @@
+{url:image.jpg;title:Sample Case Study;subtitle:Image;note:A note can be entered here},{url:video.flv;title:Sample Case Study;subtitle:Video},{url:flash.swf;title:Sample Case Study}

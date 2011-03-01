@@ -1,0 +1,44 @@
+{
+	url:image.jpg;
+	title:Sample ViewingRoom;
+	subtitle:Image;
+	note:A note can be entered here;
+}
+
+{
+	url:slide1.jpg,slide2.jpg,slide3.jpg;
+	title:Sample ViewingRoom;
+	subtitle:Images Slideshow;
+}
+
+{
+	url:video.flv;
+	title:Sample ViewingRoom;
+	subtitle:Video;
+}
+
+{
+	url:flash.swf;
+	title:Sample ViewingRoom;
+	subtitle:Flash;
+}
+
+{
+	url:jungle.mp3;
+	title:Sample ViewingRoom;
+	subtitle:Audio File;
+	audioTitle:Jungle;
+	audioSubtitle:Public Domain sound fx from simplythebest.net;
+}
+
+{
+	url:jungle.mp3,ocean.mp3,thunder.mp3;
+	title:Sample ViewingRoom;
+	subtitle:Audio mp3 Player;
+	audioTitle:Jungle;
+	audioSubtitle:Public Domain sound fx from simplythebest.net;
+	audioTitle:Ocean;
+	audioSubtitle:Public Domain sound fx from simplythebest.net;
+	audioTitle:Thunder;
+	audioSubtitle:Public Domain sound fx from simplythebest.net;
+}

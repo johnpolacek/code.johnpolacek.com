@@ -1,0 +1,75 @@
+The Fonthead Design Inc. License Agreement
+Version 2.01 - May 21, 2009
+
+By downloading and/or installing Fonthead Design Inc. software you agree to be bound by the terms of this Agreement. This Agreement, in conjunction with the receipt that accompanies each purchase from Fonthead Design Inc. or its distributors, constitutes the complete agreement between you and Fonthead Design Inc.
+
+1. Allowed Uses
+
+You may use the licensed fonts to create images on any surface such as computer or television screens, paper, web pages, photographs, movie credits, printed material, T-shirts, and other surfaces where the image is a fixed size.
+
+You may use the licensed fonts to create EPS files or other scalable drawings, including logos.
+
+You may embed the licensed fonts in accordance with the rules described in Section Four of this license.
+
+You may not create alphabet or letterform products for resale where the product consists of individual letterforms, including rubber stamps, die-cut products, stencil products, or adhesive sticker alphabet products where the likeness of the licensed fonts can be reproduced and the end-user of said products can create their own typesetting. 
+
+You may create typographic products using the licensed fonts if the product consists of commonly recognized words or phrases. For example: a rubber stamp that has the words "Thank You" or a sticker that says "Great!"
+
+If there are illustrations or images in the licensed fonts OTHER THAN letterforms, numbers, punctuation marks, diacritics, etc, you may NOT use the licensed fonts in a manner where the illustration or image becomes the primary aspect of a product for resale. For example, if an image was used on a coffee cup, to sell the coffee cup, or on a t-shirt to sell the t-shirt or on a greeting card to sell the greeting card, etc.
+
+2. Number of Devices
+
+You may install the licensed fonts on at least five and up to as many single-seat computing devices (ie: desktop computer, laptop computer, PDA, etc.) and web servers under direct control of the licensee as is specified in the applicable receipt.  All computing devices must be owned, controlled or managed by the same company or household that holds the license to use the fonts.
+
+3. Third parties and Transferability 
+
+You may provide the font to a graphic designer, printer or other service bureau that is working on your behalf only if they agree to use the font exclusively for your work, agree to the terms of this license, and retain no copies of the font on completion of the work.
+
+You may not provide the font or make it accessible to any other third parties except via embedding in accordance with the rules described in Section Four of this license.
+
+You may transfer the license to another party only if you retain no copies of the fonts after the transfer.
+
+4. Embedding
+
+4a. Adobe Portable Document Format ("PDF") Embedding
+You may embed the licensed fonts into any read-only PDF you send to third parties. Such documents may only be viewable and printable (but not editable) by the recipients.
+
+4b. HTML Web Page Embedding 
+You may embed the licensed fonts into HTML web pages only for the purpose of typesetting the page using any of the following methods and technologies: @font-face Cascading Style Sheet ("CSS") rules, Adobe Flash files, Microsoft Silverlight files, sIFR, fLIR, Cufón and Typeface.js. Other technologies not listed here that would allow a designer to typeset web pages using the licensed fonts are allowed. The licensed fonts must not be obviously downloadable and must be reasonably hidden from average users with whatever web page embedding method you employ.
+
+4c. Application and Game Embedding
+You may embed the licensed fonts into a computer application or game only with the written permission of Fonthead Design Inc. Additional licensing fees may apply.
+
+5. Modifications
+
+You may import characters from the font as graphical objects into a drawing program and modify such graphical objects.
+
+You may not modify, adapt, translate, reverse engineer, decompile, disassemble, or create derivative works based on the licensed font itself without Foundry’s prior written consent except to derive computer files you need to embed the licensed fonts as described in Section Four.
+
+6. Copyright
+
+The font and the accompanying materials are copyrighted and contain proprietary information and trade secrets belonging to Fonthead Design Inc. Unauthorized copying of the Product even if modified, merged, or included with other software, or of the written materials, is expressly forbidden. You may be held legally responsible for any infringement of the foundry’s intellectual property rights that is caused or encouraged by your failure to abide by the terms of this Agreement.
+
+7. Termination
+
+This Agreement is effective until terminated. This Agreement will terminate automatically without notice from Fonthead Design Inc. or the Foundry if you fail to comply with any provision contained herein. Upon termination, you must destroy the written materials, the Product, and all copies of them, in part and in whole, including modified copies, if any.
+
+8. Product Upgrades
+
+Fonthead Design Inc. may, from time to time, update the Product. Product upgrade pricing may apply.
+
+9. Disclaimer and Limited Warranty
+
+Fonthead Design Inc. warrants the Product to be free from defects in materials and workmanship under normal use for a period of twenty one (21) days from the date of delivery as shown on your receipt. Fonthead Design Inc.'s entire liability and your exclusive remedy as to a defective product shall be, at Fonthead Design Inc.'s option, either return of purchase price or replacement of any such product that is returned to Fonthead Design Inc. with a copy of the invoice. Fonthead Design Inc. shall have no responsibility to replace the product or refund the purchase price if failure results from accident, abuse or misapplication, or if any product is lost or damaged due to theft, fire, or negligence. Any replacement product will be warranted for twenty one (21) days. This warranty gives you specific legal rights. You may have other rights, which vary from state to state.
+
+EXCEPT AS EXPRESSLY PROVIDED ABOVE, THE PRODUCT, IS PROVIDED “AS IS”. Fonthead Design Inc. MAKES NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+The entire risk as to the quality and performance of the Product rests upon you. Neither Fonthead Design Inc. nor the Foundry warrants that the functions contained in the Product will meet your requirements or that the operation of the software will be uninterrupted or error free.
+
+FONTHEAD DESIGN INC. SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, OR INCIDENTAL DAMAGES (INCLUDING DAMAGES FROM LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, AND THE LIKE) ARISING OUT OF THE USE OF OR INABILITY TO USE THE PRODUCT EVEN IF FONTHEAD DESIGN INC. OR THE FOUNDRY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+Because some states do not allow the exclusion or limitation of liability for consequential or incidental damages, the above limitation may not apply to you.
+
+10. Governing Law
+
+This agreement is governed by the laws of the United States of America and the State of Delaware.

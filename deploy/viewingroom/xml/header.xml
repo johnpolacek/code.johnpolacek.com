@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE set PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<section>
+	<table spacing="0">
+		<col>
+			<![CDATA[<masthead><img src="icon.png" /></masthead>]]>
+		</col>
+		<col offsety="10">
+			<![CDATA[<h1>ViewingRoom Flash Site Template</h1>]]>
+		</col>
+	</table>
+</section>

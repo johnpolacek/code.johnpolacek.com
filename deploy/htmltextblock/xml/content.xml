@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<![CDATA[
+	
+	<h1>Resizeable, HTML-Formatted TextField With Runtime Font Embedding & CSS Styling</h1>
+	<p><br/><img src="images/image.png" />This is an example of a text field containing an inline image. The text has been loaded from an xml file is styled with an external css stylesheet. The Gentium font family, referenced by the css, has been loaded at runtime. The Gentium font family is licensed under the <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=OFL" target="_blank">SIL Open Font License</a>. The styles available for Gentium are <b>bold</b>, <i>italic</i> and <b><i>bold italic</i></b>.</p>
+	
+	]]>
+</xml>
+			
